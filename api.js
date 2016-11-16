@@ -9,31 +9,21 @@ var S = require('string');
 var execall = require('execall');
 
 
+
 var content;
 var spheres = [];
 var links = [];
-var current;
 
 
-getContent('iraq', mainOperations);
-
-var i=0;
+module.exports = function(op){
+  getContent(op, mainOperations);
+  return {content,spheres,links};
+};
 
 function mainOperations (origin) {
   createSpheresFromText(content);
   createLinks(spheres, origin);
-  //getContent(spheres[i], mainOperations);
-  i++;
 }
-
-
-function printMe(anything,callback) {
-  console.log(anything);
-}
-
-setTimeout(function() {
-  printMe(spheres);
-}, 5000);
 
 
 //get an array of words from space or period seperated list of words (text)
