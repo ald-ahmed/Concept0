@@ -1,5 +1,3 @@
-var trash = ["are", "something", "your", "etc", "its", "do", "can", "to", "of", "if", "is", "in", "for", "on", "with", "at", "by", "from", "up", "about", "into", "over", "after", "beneath", "under", "above", "the", "and", "a", "that", "I", "it", "not", "he", "as", "you", "this", "but", "his", "they", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their"];
-
 
 var $ = require('jquery')(require("jsdom").jsdom().defaultView);
 var express = require('express');
@@ -14,17 +12,47 @@ var content;
 var spheres = [];
 var links = [];
 
+var allLinks= [];
+var allSpheres= [];
 
-module.exports = function(op){
-  getContent(op, mainOperations);
-  return {content,spheres,links};
-};
+
+getContent('iraq', mainOperations);
 
 function mainOperations (origin) {
   createSpheresFromText(content);
   createLinks(spheres, origin);
+  deliverResults();
 }
 
+function deliverResults () {
+//  console.log(spheres);
+//  console.log(links);
+repeat();
+}
+
+var i=0;
+function repeat () {
+  allLinks=  allLinks.concat(links);
+  links=[];
+
+  allSpheres=  allSpheres.concat(spheres);
+  spheres=[];
+
+//  console.log(allLinks);
+  //console.log("               Requesting " + allSpheres[i]);
+  getContent(allSpheres[i], mainOperations);
+  i++;
+}
+
+
+setTimeout(function() {
+  console.log(allLinks);
+
+  setTimeout(function() {
+  process.exit(0);
+}, 2000);
+
+}, 500000);
 
 //get an array of words from space or period seperated list of words (text)
 function createSpheresFromText(input) {
@@ -130,7 +158,11 @@ function getContent(query,callback) {
       dataType: 'jsonp',
       success: function(json) {
           var pages = json.query.pages;
-
+          if (pages[-1]!==undefined){
+            console.log('dead end');
+            repeat();
+            return 0;
+          }
           $.each(pages, function(index, val) {
               var ex = val.extract;
               content= ex;
@@ -139,8 +171,11 @@ function getContent(query,callback) {
               callback(query);
           });
 
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(xhr.status);
+        console.log(thrownError);
       }
-
   });
 
 }
