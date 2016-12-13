@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
+
+<link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -19,7 +23,7 @@
 
 body {
   font-family: 'Open Sans';
-
+  overflow-x: hidden;
 }
 .main {
   font-weight: 400;
@@ -119,7 +123,16 @@ h2{
 img {
   left:0;margin: 0 auto; position:relative ;display:block;
 }
+.video-js {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+}
 
+video {
+  position: relative!important;
+  margin: 0 auto;
+}
 footer {
 background-color: grey;
  margin-top:2%;
@@ -218,6 +231,15 @@ We want to make a program to “understand” the meaning of words in terms of o
 <p>For the dictionary, a free API provided by Pearson is used. The method is simply a recursive function that outputs to console. The output is then copied, refined, and graphed on Gephi.</p>
 <p>The result of this simple hypothesis was astounding. As seen, the program clustered things like days of the week around &ldquo;week,&rdquo; even though &ldquo;Monday&rdquo; is not a synonym of &ldquo;week.&rdquo;</p>
 
+
+<video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" height="auto"  data-setup="{}">
+    <source src="1.mp4" type='video/mp4'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
 <h2 class="section-heading">Potential and Limitation</h2>
 <p>What happened in the experiment above is that we replicated a very minor apparent mental process that people do when they seek to understand words. Of course, we are capable of much higher cognitive functions, so this program won&rsquo;t be able to understand the hierarchy of how words are structured just yet (&ldquo;water is a liquid and a liquid is a substance&rdquo;).</p>
 <p>What it can do, however, is read a dictionary and make semantic connections related to broad meaning and not just immediate synonyms.</p>
@@ -228,7 +250,7 @@ We want to make a program to “understand” the meaning of words in terms of o
 <h2 class="section-heading">Expanding and Refining</h2>
 <p>A dictionary is nice, but I don't use it often. If I want to learn about something, I usually click the first Wikipedia link after searching for a topic on Google.</p>
 <p>Let's replicate the dictioanry experiment but replace the dictionary with Wikipedia. Warning: the following image might be overwhelming.</p>
-
+<img src="2.png" width="80%"> </img>
                           </div>
                       </div>
                   </div>
@@ -251,6 +273,7 @@ We want to make a program to “understand” the meaning of words in terms of o
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
 
 </body>
 </html>
