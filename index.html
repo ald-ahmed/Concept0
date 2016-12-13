@@ -231,13 +231,15 @@ We want to make a program to “understand” the meaning of words in terms of o
 
 <h2 class="section-heading">Step 1: Generating a Concept Map</h2>
 
-<p>Besides learning from friends or people around me, as a second English language learning, I often found myself using the dictionary to understand the meaning of words.</p>
+<p>Besides learning from friends or people around me, as a second English language learner, I often found myself using the dictionary to understand the meaning of words.</p>
 <p>Similarly, I propose the usage of a dictionary to allow the program to form connections. From intuition, any dictionary definition will either define words by using synonyms or by mentioning the components that make up the concept the word refers to.</p>
 <p>Here&rsquo;s an example: For a word like &ldquo;angry,&rdquo; a definition will probably say &ldquo;the feeling of being upset, frustrated, or infuriated.&rdquo; &ldquo;Upset&rdquo;, &ldquo;frustrated&rdquo;, and &ldquo;infuriated&rdquo; are all semantically close to angry and &ldquo;feeling&rdquo; is a component of being angry.</p>
 <p>Here&rsquo;s a proposition on how a program can use this to build a concept map:</p>
-<p>1. Using a dictionary API, look up a word, call this word the origin.</p>
-<p>2. For each word in the returned definition, connect it to the origin word.</p>
-<p>3. Now, for each word in the returned definition, look that word up and repeat step 2.</p>
+<blockquote class="blockquote">
+<p>1. Look up a word in the dictionary, call this word the <b>origin</b>.</p>
+<p>2. Connect each word in the returned definition to the <b>origin</b> word.</p>
+<p>3. For each word in the returned definition, repeat step 1.</p>
+</blockquote>
 <p>For the dictionary, a free API provided by Pearson is used. The method is simply a recursive function that outputs to console. The output is then copied, refined, and graphed on Gephi.</p>
 <p>The result of this simple hypothesis was astounding. As seen, the program clustered things like days of the week around &ldquo;week,&rdquo; even though &ldquo;Monday&rdquo; is not a synonym of &ldquo;week.&rdquo;</p>
 
@@ -260,7 +262,7 @@ We want to make a program to “understand” the meaning of words in terms of o
 <h2 class="section-heading">Expanding and Refining</h2>
 <p>A dictionary is nice, but I don't use it often. If I want to learn about something, I usually click the first Wikipedia link after searching for a topic on Google.</p>
 <p>Let's replicate the dictioanry experiment but replace the dictionary with Wikipedia. Warning: the following image might be overwhelming.</p>
-<a href="http://www.aldulaimy.com/lt.pdf"><img src="2.png" width="80%"> </img></a>
+<a href="http://www.aldulaimy.com/lt.pdf" alt="click to view"><img src="2.png" width="80%"> </img></a>
                           </div>
                       </div>
                   </div>
