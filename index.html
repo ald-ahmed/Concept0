@@ -28,7 +28,7 @@ body {
 .intro  {
   font-family: 'Lato';
   font-weight: 300;
-  font-size: 72px;
+  font-size: 32px;
   display:block;
 }
 
@@ -44,7 +44,7 @@ animation-duration: 1s;
 
 @keyframes line-opening {
   from {width: 0%; opacity:0;}
-  to {width: 100%;}
+  to {width: 50%;}
 }
 
 @keyframes loaded  {
@@ -55,7 +55,7 @@ animation-duration: 1s;
  .border{
    background: #ffffff none repeat scroll 0 0;
    content: "";
-   height: 5px;
+   height: 2px;
    transition-delay: 1s;
    transition-property: width, opacity;
    transform-style: ease;
@@ -63,8 +63,10 @@ animation-duration: 1s;
    animation-duration: 2s;
    animation-delay: 0s;
    display:block;
-   width:100%;
-opacity:1;
+   position: relative;
+   width:50%;
+   left:25%;
+   opacity:1;
  }
 
 a, a:hover{
@@ -91,7 +93,7 @@ h2 {
     background: rgba(0, 0, 0, 0) linear-gradient(to left, #e96443, #904e95) repeat scroll 0 0;
         color: #ffffff;
             margin-bottom: 10%;
-    padding:10%;
+    padding:5%;
 }
 .transparent.navbar-inverse .navbar-inner {
    background: rgba(0,0,0,0.4);
@@ -117,6 +119,13 @@ h2{
 img {
   left:0;margin: 0 auto; position:relative ;display:block;
 }
+
+footer {
+background-color: grey;
+ margin-top:2%;
+ padding-top:1%;
+color:white;
+text-align: center;
 }
 
 
@@ -126,7 +135,7 @@ img {
   <body data-spy="scroll" data-target="#toc">
 
     <!-- Navigation -->
-       <nav class=" transparent  ">
+       <nav class=" transparent">
            <div class="container-fluid">
                <!-- Brand and toggle get grouped for better mobile display -->
                <div class="navbar-header page-scroll">
@@ -143,6 +152,8 @@ img {
                            <a href="index.html">Home</a>
                        </li>
                        <li>
+                       </li>
+
                    </ul>
                </div>
                <!-- /.navbar-collapse -->
@@ -152,56 +163,71 @@ img {
 
 
        <header class="intro-header">
-              <div class="container">
 
-<div class="border">
-</div>
-                   <span class='intro'> Concept 0 </span>
-<div class="border">
-</div>
+         <img class='intro' src="logo.png" width="220px">  </img>
 
-<small><br>a (simple) NLP project.</small>
-                  </div>
+
           </header>
 
-          <nav id="toc" class= "hidden-sm hidden-xs " data-toggle="toc"></nav>
 
               <!--  Content -->
               <div class="main">
+                <nav id="toc" class= "hidden-sm hidden-xs " data-toggle="toc"></nav>
+
                   <div class="container">
                       <div class="row">
                           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-                            <h2 class="section-heading">A necessary why</h2>
+                            <h2 class="section-heading">Preface</h2>
 
 
-                            <p>Hi!</p>
-                            <p>There's a problem with the way science functions today. Scientific literature is often so focused on it&rsquo;s inner-circle audience (researchers and other scientists), that it neglects the task of sharing and explaining the results to the more general population. This crucial task of communication is often left up to the media, which in attempting to gain the reader&rsquo;s attention will either sensationalize findings or risk not being read at all.</p>
-                            <p>This hints at broader issue at hand, which is effective communication of findings. How do we begin to make science more understandable? Or perhaps politics? Or for that matter any other highly-specialized sector of life?</p>
-                            <p>I&rsquo;m not completely sure how to solve this issue, but I do happen to be an undergraduate CS student who&rsquo;s interested in machine learning. I understand some but not all machine learning papers I read, and I find it discouraging to know that I will only begin to understand this topic in perhaps 4, 5, or 6 years from now.</p>
-                            <p>With the aim to provide some insight into this issue, and through the spirit of scientific research and open source work, I present Concept 0.</p>
-                            <p>This is a project that explores natural language processing - but with a twist.</p>
+                            <p>There exists a problem with the way science functions today. Machine learning literature is often so focused on it&rsquo;s inner-circle audience (researchers and other scientists), that it neglects the task of sharing and explaining the results to the more general population. This crucial task of communication is often left up to the media, which in attempting to gain the reader&rsquo;s attention will either sensationalize findings or risk not being read at all.</p>
+                            <p>This hints at broader issue at hand, which is effective communication. How do we begin to make ML more understandable? Or for that matter, any other highly-specialized sector of technology?</p>
+
+                            <p>With the aim to provide some insight into this issue, and through the spirit of scientific research and open source work, I present a special natural language processing project.</p>
                               <blockquote>The mission is simple: attempt to create a natural language processing AI, and in doing so, outline, explore, and present the results from the perspective of a student.</blockquote>
                             <p>This means less usage of highly scientific&nbsp;terminology and more of simple, easy to understand research results for anyone to examine and learn from. More specifically, this is a project that aims to explore what occurs when we attempt to model computer algorithms using what we know about psychology and neuroscience.</p>
 
 
 
 
+                            <h2 class="section-heading">"What does ___ mean?"</h2>
 
+<p> Examine the following scenario: </p>
 
-                            <h2 class="section-heading">What does ___ mean?</h2>
-                            <p>Hi!</p>
-                            <p>There's a problem with the way science functions today. Scientific literature is often so focused on it&rsquo;s inner-circle audience (researchers and other scientists), that it neglects the task of sharing and explaining the results to the more general population. This crucial task of communication is often left up to the media, which in attempting to gain the reader&rsquo;s attention will either sensationalize findings or risk not being read at all.</p>
-                            <p>This hints at broader issue at hand, which is effective communication of findings. How do we begin to make science more understandable? Or perhaps politics? Or for that matter any other highly-specialized sector of life?</p>
-                            <p> <img width="50%" src="http://www.aldulaimy.com/lt.png"></p>
-                            <p>With the aim to provide some insight into this issue, and through the spirit of scientific research and open source work, I present Concept 0.</p>
-                            <p>This is a project that explores natural language processing - but with a twist.</p>
+<p>Rewind to the first grade. You and your best friend are talking about the homework during class. Your friend mentions an unfamiliar word, lets say, “complex.” You ask what “complex” means and your friend replies “its like complicated.” You nod or perhaps smile.
+</p>
+In this scenario, you didn’t learn anything more about the word “complex” other than the fact that it’s close to “complicated” in terms of what it signifies.
+<p>
+So, if we imagine that each word in your vocabulary is a small node or sphere, you simply grouped up the nodes “complicated” and “complex” together, and said to yourself that the two are used to mean approximately the same thing.
+</p>
+The question is, can we replicate this natural clustering that humans do in terms of a program that can group up words that mean the same thing? It’s important to note that we can’t simple pull up a ready list of synonyms for each word we are interested in. We want a program to understand the connections between words without having to rely on a human-categorized set of connections.
+<p>
+We want to make a program to “understand” the meaning of words in terms of other words, and do so unsupervised. Such program can then be applied to many uses, such as summerizing text (more on that later).
+</p>
 
-                            <p>This means less usage of highly scientific&nbsp;terminology and more of simple, easy to understand research results for anyone to examine and learn from. More specifically, this is a project that aims to explore what occurs when we attempt to model computer algorithms using what we know about psychology and neuroscience.</p>
+<h2 class="section-heading">Step 1: Generating a Concept Map</h2>
 
+<p>Besides learning from friends or people around me, as a second English language learning, I often found myself using the dictionary to understand the meaning of words.</p>
+<p>Similarly, I propose the usage of a dictionary to allow the program to form connections. From intuition, any dictionary definition will either define words by using synonyms or by mentioning the components that make up the concept the word refers to.</p>
+<p>Here&rsquo;s an example: For a word like &ldquo;angry,&rdquo; a definition will probably say &ldquo;the feeling of being upset, frustrated, or infuriated.&rdquo; &ldquo;Upset&rdquo;, &ldquo;frustrated&rdquo;, and &ldquo;infuriated&rdquo; are all semantically close to angry and &ldquo;feeling&rdquo; is a component of being angry.</p>
+<p>Here&rsquo;s a proposition on how a program can use this to build a concept map:</p>
+<p>1. Using a dictionary API, look up a word, call this word the origin.</p>
+<p>2. For each word in the returned definition, connect it to the origin word.</p>
+<p>3. Now, for each word in the returned definition, look that word up and repeat step 2.</p>
+<p>For the dictionary, a free API provided by Pearson is used. The method is simply a recursive function that outputs to console. The output is then copied, refined, and graphed on Gephi.</p>
+<p>The result of this simple hypothesis was astounding. As seen, the program clustered things like days of the week around &ldquo;week,&rdquo; even though &ldquo;Monday&rdquo; is not a synonym of &ldquo;week.&rdquo;</p>
 
+<h2 class="section-heading">Potential and Limitation</h2>
+<p>What happened in the experiment above is that we replicated a very minor apparent mental process that people do when they seek to understand words. Of course, we are capable of much higher cognitive functions, so this program won&rsquo;t be able to understand the hierarchy of how words are structured just yet (&ldquo;water is a liquid and a liquid is a substance&rdquo;).</p>
+<p>What it can do, however, is read a dictionary and make semantic connections related to broad meaning and not just immediate synonyms.</p>
+<p>If refined and expanded, I think it can become an example of a reverse engineered dictionary: you ask it what a word means, and it will try to gather what type of connections is has and come up with a definition.</p>
+<p>Of course, such auto definer is not very useful, and I will not attempt to make it, but I mention it because I believe it entails is a step in the right direction.</p>
+<p>In order to build more useful applications, this map must be refined and expanded. The first step in this is using a different type of knowledge source in order to access more words and terms.</p>
 
-
+<h2 class="section-heading">Expanding and Refining</h2>
+<p>A dictionary is nice, but I don't use it often. If I want to learn about something, I usually click the first Wikipedia link after searching for a topic on Google.</p>
+<p>Let's replicate the dictioanry experiment but replace the dictionary with Wikipedia. Warning: the following image might be overwhelming.</p>
 
                           </div>
                       </div>
@@ -213,34 +239,8 @@ img {
   <footer>
       <div class="container">
           <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                  <ul class="list-inline text-center">
-                      <li>
-                          <a href="#">
-                              <span class="fa-stack fa-lg">
-                                  <i class="fa fa-circle fa-stack-2x"></i>
-                                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                              </span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="fa-stack fa-lg">
-                                  <i class="fa fa-circle fa-stack-2x"></i>
-                                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                              </span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="fa-stack fa-lg">
-                                  <i class="fa fa-circle fa-stack-2x"></i>
-                                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                              </span>
-                          </a>
-                      </li>
-                  </ul>
-                  <p class="copyright text-muted">2016</p>
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
+                  <p>Ahmed Al Dulaimy, 2016</p>
               </div>
           </div>
       </div>

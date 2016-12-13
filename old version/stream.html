@@ -1,0 +1,53 @@
+
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+<script>
+// Gephi Streaming Master should be launch in your computer
+var websocket = new WebSocket("ws://localhost:8087/workspace1?action=updateGraph")
+websocket.onopen = function (event) {
+
+        // Sending event following the API and message structure defined
+        websocket.send('{"an":{"a":{"label":"a"}}}')
+        websocket.send('{"an":{"b":{"label":"b"}}}')
+        websocket.send('{"ae":{"ab":{"source":"a","target":"b"}}}')
+
+        randomGenerate()
+
+};
+
+// A Quick & Dirty example to see the "real-time" graph
+function randomGenerate(){
+      setTimeout(function(){
+         var test = (Math.floor( Math.random() * 50 ) + 1)%2 ;
+          for (i = 0; i < 10; i++) {
+                var id = Math.floor( Math.random() * 50 ) + 1 ;
+                websocket.send('{"an":{"'+id+'":{"label":"'+id+'"}}}')
+            }
+            for (i = 0; i < 10; i++) {
+                var source = Math.floor( Math.random() * 50 ) + 1 ;
+                var target = Math.floor( Math.random() * 50 ) + 1 ;
+
+
+                if(test===0) {
+                    websocket.send('{"ae":{"'+source+'-'+target+'":{"source":"'+source+'","target":"'+target+'"}}}')
+                } else {
+                    websocket.send('{"de":{"'+source+'-'+target+'":{"source":"'+source+'","target":"'+target+'"}}}')
+                }
+
+            }
+            randomGenerate()
+        }, 2000)
+}
+
+</script>
+  </head>
+  <body>
+
+  </body>
+</html>
