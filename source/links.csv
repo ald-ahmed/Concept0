@@ -1,0 +1,856 @@
+ID,Source,Target,Weight
+0,middle east,copts,1
+1,middle east,limited,1
+2,middle east,irrigation,1
+3,middle east,being,1
+4,middle east,particular,1
+5,middle east,mid,1
+6,middle east,adjective,1
+7,middle east,religions,1
+8,middle east,including,1
+9,middle east,middle-easterner,1
+10,middle east,islam,1
+11,middle east,gulf,1
+12,middle east,millennia,1
+13,middle east,arid,1
+14,middle east,to,3
+15,middle east,arabian,1
+16,middle east,systems,1
+17,middle east,usage,1
+18,middle east,east,7
+19,middle east,exports,1
+20,middle east,far,1
+21,middle east,early,1
+22,middle east,vast,1
+23,middle east,areas,1
+24,middle east,term,2
+25,middle east,judaism,1
+26,middle east,countries,1
+27,middle east,azeris,1
+28,middle east,20th,1
+29,middle east,replacement,1
+30,middle east,dictatorships,1
+31,middle east,jews,1
+32,middle east,watersheds,1
+33,middle east,back,1
+34,middle east,euphrates,1
+35,middle east,rivers,1
+36,middle east,constitute,1
+37,middle east,persian,1
+38,middle east,crescent,1
+39,middle east,agriculture,1
+40,middle east,belief,1
+41,middle east,established,1
+42,middle east,what,1
+43,middle east,turks,1
+44,middle east,somalis,1
+45,middle east,greeks,1
+46,middle east,near,1
+47,middle east,asia,1
+48,middle east,unitarian,1
+49,middle east,transcontinental,1
+50,middle east,crude,1
+51,middle east,numerous,1
+52,middle east,druze,1
+53,middle east,persians,1
+54,middle east,importance,1
+55,middle east,groups,2
+56,middle east,from,1
+57,middle east,beginning,1
+58,middle east,by,1
+59,middle east,on,1
+60,middle east,dates,1
+61,middle east,origins,1
+62,middle east,of,8
+63,middle east,region,4
+64,middle east,recognized,1
+65,middle east,times,1
+66,middle east,major,2
+67,middle east,fertile,1
+68,middle east,egypt,2
+69,middle east,tigris,1
+70,middle east,into,1
+71,middle east,within,1
+72,middle east,mandaeans,1
+73,middle east,wider,1
+74,middle east,ancient,1
+75,middle east,assyrians,1
+76,middle east,come,1
+77,middle east,support,1
+78,middle east,petroleum,1
+79,middle east,christianity,1
+80,middle east,circassians,1
+81,middle east,their,1
+82,middle east,opposed,1
+83,middle east,kurds,1
+84,middle east,arabs,1
+85,middle east,a,3
+86,middle east,corresponding,1
+87,middle east,form,1
+88,middle east,faith,1
+89,middle east,centered,1
+90,middle east,benefiting,1
+91,middle east,climate,1
+92,middle east,peninsula,1
+93,middle east,western,1
+94,middle east,delta,1
+95,middle east,known,1
+96,middle east,with,3
+97,middle east,population,1
+98,middle east,has,2
+99,middle east,mandaeism,1
+100,middle east,while,1
+101,middle east,were,1
+102,middle east,mesopotamia,1
+103,middle east,providing,1
+104,middle east,called,1
+105,middle east,history,1
+106,middle east,and,9
+107,middle east,century,1
+108,middle east,is,4
+109,middle east,middle,4
+110,middle east,as,4
+111,middle east,reserves,1
+112,middle east,nile,1
+113,middle east,have,2
+114,middle east,in,6
+115,middle east,minorities,1
+116,middle east,border,1
+117,middle east,middle-eastern,1
+118,middle east,that,1
+119,middle east,generally,1
+120,middle east,armenians,1
+121,middle east,also,2
+122,middle east,hot,1
+123,middle east,other,2
+124,middle east,largest,1
+125,middle east,several,2
+126,middle east,baha'i,1
+127,middle east,oil,1
+128,middle east,derived,1
+129,middle east,most,2
+130,middle east,significant,1
+131,middle east,ethnic,2
+132,middle east,such,1
+133,middle east,shabaks,1
+134,middle east,geopolitical,1
+135,middle east,noun,1
+136,middle east,for,1
+137,middle east,the,24
+138,middle east,ethnoreligious,1
+139,the,and,2
+140,the,all,1
+141,the,already,1
+142,the,nouns,3
+143,the,is,4
+144,the,numbers,1
+145,the,have,1
+146,the,in,2
+147,the,mentioned,1
+148,the,accounting,1
+149,the,person(s,1
+150,the,any,2
+151,the,pronounced,1
+152,the,different,3
+153,the,from,1
+154,the,for,2
+155,the,start,1
+156,the,thing(s,1
+157,the,discussion,1
+158,the,that,1
+159,the,definite,1
+160,the,two,1
+161,the,languages,1
+162,the,to,1
+163,the,only,1
+164,the,other,1
+165,the,7,1
+166,the,under,1
+167,the,letter,1
+168,the,many,1
+169,the,plural,1
+170,the,be,1
+171,the,used,2
+172,the,which,1
+173,the,singular,1
+174,the,familiar,1
+175,the,reader,1
+176,the,denoting,1
+177,the,listener,1
+178,the,most,1
+179,the,words,1
+180,the,articles,1
+181,the,article,1
+182,the,with,4
+183,the,presumed,1
+184,the,both,1
+185,the,gender,1
+186,the,word,1
+187,the,language,1
+188,the,this,1
+189,the,of,2
+190,the,commonly,1
+191,the,ways,1
+192,the,implied,1
+193,the,can,1
+194,the,english,2
+195,the,genders,1
+196,the,ðə,1
+197,the,or,4
+198,the,otherwise,1
+199,east,direction,1
+200,east,from,1
+201,east,opposite,1
+202,east,of,2
+203,east,is,2
+204,east,it,1
+205,east,one,1
+206,east,four,1
+207,east,points,1
+208,east,cardinal,1
+209,east,west,1
+210,east,compass,1
+211,east,directions,1
+212,east,the,3
+213,east,or,1
+214,a,and,4
+215,a,named,1
+216,a,vowel,1
+217,a,ɑ,1
+218,a,is,4
+219,a,it,3
+220,a,latter,1
+221,a,lower-case,1
+222,a,slanting,1
+223,a,as,2
+224,a,used,1
+225,a,ˈeɪ,1
+226,a,in,5
+227,a,consists,1
+228,a,based,1
+229,a,children,1
+230,a,upper-case,1
+231,a,ancient,1
+232,a,from,1
+233,a,double-storey,1
+234,a,also,1
+235,a,alphabet,1
+236,a,single-storey,1
+237,a,two,2
+238,a,by,2
+239,a,forms,1
+240,a,to,2
+241,a,written,1
+242,a,version,2
+243,a,which,1
+244,a,basic,1
+245,a,crossed,1
+246,a,plural,1
+247,a,handwriting,1
+248,a,be,2
+249,a,latin,1
+250,a,triangle,1
+251,a,intended,1
+252,a,type,1
+253,a,read,1
+254,a,italic,1
+255,a,letter,2
+256,a,alpha,1
+257,a,horizontal,1
+258,a,derives,1
+259,a,sides,1
+260,a,on,1
+261,a,aes,1
+262,a,bar,1
+263,a,especially,1
+264,a,middle,1
+265,a,a's,2
+266,a,fonts,2
+267,a,commonly,1
+268,a,greek,1
+269,a,iso,1
+270,a,can,1
+271,a,of,2
+272,a,found,1
+273,a,the,10
+274,a,similar,1
+275,a,or,1
+276,a,first,2
+277,fonts,and,3
+278,fonts,still,1
+279,fonts,applied,1
+280,fonts,set,1
+281,fonts,weight,1
+282,fonts,be,3
+283,fonts,advent,1
+284,fonts,is,2
+285,fonts,modern,1
+286,fonts,synonymous,1
+287,fonts,bulmer,5
+288,fonts,dynamically,1
+289,fonts,one,3
+290,fonts,alone,1
+291,fonts,might,1
+292,fonts,design,2
+293,fonts,file,1
+294,fonts,in,4
+295,fonts,font,5
+296,fonts,roman,1
+297,fonts,size,1
+298,fonts,style,2
+299,fonts,from,1
+300,fonts,for,2
+301,fonts,to,2
+302,fonts,separate,1
+303,fonts,that,2
+304,fonts,two,1
+305,fonts,same,1
+306,fonts,instance,1
+307,fonts,italic,1
+308,fonts,typesetting,1
+309,fonts,usage,1
+310,fonts,shared,1
+311,fonts,means,1
+312,fonts,glyph,1
+313,fonts,type,1
+314,fonts,consisting,1
+315,fonts,either,1
+316,fonts,sort,1
+317,fonts,do,1
+318,fonts,extended,1
+319,fonts,terms,1
+320,fonts,bold,1
+321,fonts,was,1
+322,fonts,may,2
+323,fonts,digital,1
+324,fonts,overall,1
+325,fonts,use,1
+326,fonts,but,1
+327,fonts,different,1
+328,fonts,generated,1
+329,fonts,necessarily,1
+330,fonts,although,1
+331,fonts,particular,2
+332,fonts,not,1
+333,fonts,frequently,1
+334,fonts,an,1
+335,fonts,with,2
+336,fonts,matched,1
+337,fonts,a,9
+338,fonts,term,1
+339,fonts,include,1
+340,fonts,outline,1
+341,fonts,sizes,1
+342,fonts,these,1
+343,fonts,of,8
+344,fonts,typeface,6
+345,fonts,metal,1
+346,fonts,typography,1
+347,fonts,or,2
+348,fonts,thing,1
+349,fonts,range,1
+350,fonts,vector,1
+351,fonts,can,1
+352,fonts,each,3
+353,fonts,the,8
+354,fonts,piece,1
+355,fonts,whole,1
+356,fonts,called,1
+357,fonts,mean,1
+358,based,and,6
+359,based,england,1
+360,based,often,1
+361,based,is,3
+362,based,particular,1
+363,based,number,1
+364,based,an,2
+365,based,born,1
+366,based,as,3
+367,based,used,1
+368,based,including,1
+369,based,spans,1
+370,based,in,2
+371,based,1989,1
+372,based,several,1
+373,based,hip-hop,1
+374,based,basedgod,1
+375,based,album,1
+376,based,genres,1
+377,based,choral,1
+378,based,from,1
+379,based,for,1
+380,based,to,2
+381,based,lil,2
+382,based,media,1
+383,based,positivity,1
+384,based,recorded,1
+385,based,brandon,1
+386,based,also,1
+387,based,mccartney,1
+388,based,build,1
+389,based,hop,1
+390,based,online,1
+391,based,new,1
+392,based,extensive,1
+393,based,has,2
+394,based,tolerance,1
+395,based,hip,1
+396,based,solo,2
+397,based,his,3
+398,based,august,1
+399,based,describe,1
+400,based,use,1
+401,based,rain,1
+402,based,released,1
+403,based,california,1
+404,based,berkeley,1
+405,based,known,1
+406,based,described,1
+407,based,one,1
+408,based,with,1
+409,based,freestyles,1
+410,based,he,2
+411,based,a,3
+412,based,both,1
+413,based,term,1
+414,based,b,2
+415,based,lifestyle,1
+416,based,mixtapes,1
+417,based,17,1
+418,based,of,3
+419,based,age,1
+420,based,work,2
+421,based,rapper,1
+422,based,professionally,1
+423,based,american,1
+424,based,social,1
+425,based,following,1
+426,based,christopher,1
+427,based,the,2
+428,based,noted,1
+429,based,pack,1
+430,children,hunger,1
+431,children,being,2
+432,children,human,1
+433,children,issues,1
+434,children,group,1
+435,children,majority,1
+436,children,labor,1
+437,children,to,1
+438,children,parents,1
+439,children,dysfunctional,1
+440,children,affected,1
+441,children,sons,1
+442,children,birth,1
+443,children,affect,1
+444,children,day,1
+445,children,clan,1
+446,children,specific,1
+447,children,strongly,1
+448,children,signify,2
+449,children,authority,1
+450,children,are,1
+451,children,circumstance,1
+452,children,legal,1
+453,children,religion,1
+454,children,between,1
+455,children,plural,1
+456,children,be,1
+457,children,parent,1
+458,children,nature,1
+459,children,metaphorically,1
+460,children,poverty,1
+461,children,refers,1
+462,children,by,3
+463,children,care,1
+464,children,definition,1
+465,children,many,1
+466,children,biologically,1
+467,children,fosterers,1
+468,children,place,1
+469,children,social,1
+470,children,guardians,1
+471,children,childhood,1
+472,children,otherwise,1
+473,children,tribe,1
+474,children,raised,2
+475,children,there,1
+476,children,minor,1
+477,children,families,1
+478,children,relationship,1
+479,children,that,1
+480,children,child,8
+481,children,known,1
+482,children,with,1
+483,children,than,1
+484,children,partially,1
+485,children,can,2
+486,children,of,6
+487,children,stages,1
+488,children,and,3
+489,children,figure,1
+490,children,is,1
+491,children,describe,1
+492,children,it,1
+493,children,an,1
+494,children,as,4
+495,children,in,3
+496,children,education,1
+497,children,any,1
+498,children,puberty,1
+499,children,generally,1
+500,children,also,2
+501,children,sixties,1
+502,children,daughters,1
+503,children,may,1
+504,children,homelessness,1
+505,children,bullying,1
+506,children,membership,1
+507,children,such,2
+508,children,a,11
+509,children,younger,1
+510,children,center,1
+511,children,age,2
+512,children,or,6
+513,children,person,1
+514,children,time,1
+515,children,the,4
+516,metal,all,1
+517,metal,generally,1
+518,metal,shape,1
+519,metal,its,1
+520,metal,astrophysicists,1
+521,metal,proportion,1
+522,metal,forms,1
+523,metal,to,3
+524,metal,permanently,1
+525,metal,under,1
+526,metal,has,1
+527,metal,good,1
+528,metal,material,1
+529,metal,they,1
+530,metal,compound,1
+531,metal,not,1
+532,metal,term,1
+533,metal,classified,1
+534,metal,thermal,1
+535,metal,become,1
+536,metal,hard,1
+537,metal,some,1
+538,metal,up,1
+539,metal,collectively,1
+540,metal,elements,5
+541,metal,are,5
+542,metal,118,1
+543,metal,out,2
+544,metal,wire,1
+545,metal,appear,1
+546,metal,opaque,1
+547,metal,malleable,1
+548,metal,pressures,1
+549,metal,non-metals,1
+550,metal,drawn,1
+551,metal,fusible,1
+552,metal,pressed,1
+553,metal,be,3
+554,metal,others,1
+555,metal,fused,1
+556,metal,both,1
+557,metal,about,1
+558,metal,of,6
+559,metal,periodic,1
+560,metal,shiny,1
+561,metal,or,5
+562,metal,can,1
+563,metal,into,1
+564,metal,allotropes,1
+565,metal,table,1
+566,metal,use,1
+567,metal,from,1
+568,metal,nonmetals,1
+569,metal,hammered,1
+570,metal,describe,1
+571,metal,quarry,1
+572,metal,that,4
+573,metal,formed,1
+574,metal,91,1
+575,metal,metalloids,1
+576,metal,than,2
+577,metal,made,1
+578,metal,non-metallic,1
+579,metal,these,1
+580,metal,as,4
+581,metal,matter,1
+582,metal,melted,1
+583,metal,thin,1
+584,metal,many,1
+585,metal,and,7
+586,metal,is,4
+587,metal,sense,1
+588,metal,mine,1
+589,metal,metals,3
+590,metal,an,2
+591,metal,high,1
+592,metal,métallon,1
+593,metal,in,3
+594,metal,hydrogen,2
+595,metal,helium,2
+596,metal,breaking,1
+597,metal,able,2
+598,metal,metallic,3
+599,metal,chemical,1
+600,metal,other,2
+601,metal,electrical,1
+602,metal,conductivity,1
+603,metal,ductile,1
+604,metal,object,1
+605,metal,metallicity,1
+606,metal,cracking,1
+607,metal,a,3
+608,metal,normally,1
+609,metal,compounds,1
+610,metal,well,1
+611,metal,element,1
+612,metal,greek,1
+613,metal,without,1
+614,metal,alloy,1
+615,metal,the,6
+616,metal,typically,1
+617,iraq,tigris,2
+618,iraq,iraqi,2
+619,iraq,from,5
+620,iraq,roman,1
+621,iraq,kawliya,1
+622,iraq,yazidis,1
+623,iraq,monarchy was,2
+624,iraq,held,1
+625,iraq,fighters,1
+626,iraq,al-arab,1
+627,iraq,through,1
+628,iraq,ottoman,2
+629,iraq,its,1
+630,iraq,rashidun,1
+631,iraq,northern,1
+632,iraq,95,1
+633,iraq,insurgency,1
+634,iraq,encompasses,1
+635,iraq,bordered,1
+636,iraq,created,1
+637,iraq,languages,1
+638,iraq,to,9
+639,iraq,millennium,1
+640,iraq,under,2
+641,iraq,uruk,1
+642,iraq,include,1
+643,iraq,2011,1
+644,iraq,alluvial,1
+645,iraq,southwest,1
+646,iraq,kingdom,2
+647,iraq,assyrian,1
+648,iraq,around,1
+649,iraq,government,1
+650,iraq,read,1
+651,iraq,hussein's,1
+652,iraq,between,1
+653,iraq,arab,1
+654,iraq,baghdad,1
+655,iraq,were,2
+656,iraq,mandate,1
+657,iraq,sunni,1
+658,iraq,1958,1
+659,iraq,overthrown,1
+660,iraq,babylonian,1
+661,iraq,northwestern,1
+662,iraq,58,1
+663,iraq,parthian,1
+664,iraq,median,1
+665,iraq,these,1
+666,iraq,miles,1
+667,iraq,saudi,1
+668,iraq,sèvres,1
+669,iraq,yezidism,1
+670,iraq,ayyubid,1
+671,iraq,referred,1
+672,iraq,often,1
+673,iraq,mandeans,1
+674,iraq,akkadian,1
+675,iraq,spilled,1
+676,iraq,euphrates,2
+677,iraq,rivers,3
+678,iraq,sumerian,1
+679,iraq,1921,1
+680,iraq,are,3
+681,iraq,run,1
+682,iraq,empire,1
+683,iraq,nations,1
+684,iraq,empires,2
+685,iraq,established,1
+686,iraq,afsharid,1
+687,iraq,has,2
+688,iraq,kuwait,1
+689,iraq,since,1
+690,iraq,asia,1
+691,iraq,ended,1
+692,iraq,saddam,1
+693,iraq,cradle,1
+694,iraq,zagros,1
+695,iraq,capital,1
+696,iraq,league,1
+697,iraq,officially,1
+698,iraq,independence,1
+699,iraq,measuring,1
+700,iraq,mandeanism,1
+701,iraq,iran,1
+702,iraq,power,1
+703,iraq,bc,1
+704,iraq,demarcated,1
+705,iraq,million,1
+706,iraq,here,1
+707,iraq,notably,1
+708,iraq,southeast,1
+709,iraq,coastline,1
+710,iraq,groups,1
+711,iraq,others,1
+712,iraq,iraq was,3
+713,iraq,yarsan,1
+714,iraq,by,5
+715,iraq,multi-party,1
+716,iraq,gained,1
+717,iraq,on,1
+718,iraq,allies,1
+719,iraq,safavid,1
+720,iraq,of,14
+721,iraq,region,1
+722,iraq,citizens,1
+723,iraq,36,2
+724,iraq,british,1
+725,iraq,mesopotamian,1
+726,iraq,range,1
+727,iraq,aɪˈræk,1
+728,iraq,achaemenid,1
+729,iraq,syria,1
+730,iraq,country's,1
+731,iraq,south,2
+732,iraq,first,1
+733,iraq,major,1
+734,iraq,fertile,1
+735,iraq,presence,1
+736,iraq,civil,1
+737,iraq,into,2
+738,iraq,successive,1
+739,iraq,shatt,1
+740,iraq,turkey,1
+741,iraq,city,1
+742,iraq,cities,1
+743,iraq,assyrians,1
+744,iraq,area,1
+745,iraq,west,1
+746,iraq,create,1
+747,iraq,ba'ath party,2
+748,iraq,two,1
+749,iraq,been,1
+750,iraq,christianity,1
+751,iraq,circassians,1
+752,iraq,live,1
+753,iraq,until,1
+754,iraq,was,2
+755,iraq,borders,1
+756,iraq,kurds,1
+757,iraq,arabs,1
+758,iraq,main,1
+759,iraq,shia,1
+760,iraq,north,1
+761,iraq,komari,1
+762,iraq,mostly,1
+763,iraq,eastern,1
+764,iraq,continued,1
+765,iraq,shabakis,1
+766,iraq,but,1
+767,iraq,elections,1
+768,iraq,part,2
+769,iraq,jordan,1
+770,iraq,western,1
+771,iraq,invasion,1
+772,iraq,known,2
+773,iraq,removed,1
+774,iraq,with,2
+775,iraq,present,1
+776,iraq,1920,1
+777,iraq,east,1
+778,iraq,ɪˈræk,1
+779,iraq,plain,1
+780,iraq,socialist,1
+781,iraq,official,1
+782,iraq,britain,1
+783,iraq,civilisations,1
+784,iraq,historically,1
+785,iraq,placed,1
+786,iraq,near,1
+787,iraq,jumhūrīyyat,1
+788,iraq,mesopotamia,2
+789,iraq,country,2
+790,iraq,treaty,1
+791,iraq,mongol,1
+792,iraq,and,19
+793,iraq,it was,2
+794,iraq,organised,1
+795,iraq,is,4
+796,iraq,in,10
+797,iraq,an,2
+798,iraq,states,1
+799,iraq,umayyad,1
+800,iraq,as,5
+801,iraq,eraq,2
+802,iraq,arabia,1
+803,iraq,controlled,1
+804,iraq,arabic,3
+805,iraq,iraq's,1
+806,iraq,syrian,2
+807,iraq,authority,1
+808,iraq,parliamentary,1
+809,iraq,mountain,1
+810,iraq,united,2
+811,iraq,end,1
+812,iraq,2003,2
+813,iraq,provide,1
+814,iraq,began,1
+815,iraq,that,1
+816,iraq,when,1
+817,iraq,armenians,1
+818,iraq,write,1
+819,iraq,also,2
+820,iraq,republic,2
+821,iraq,which,1
+822,iraq,largest,1
+823,iraq,civilisation,1
+824,iraq,abbasid,1
+825,iraq,war,1
+826,iraq,1932,1
+827,iraq,centre,1
+828,iraq,modern,1
+829,iraq,after,1
+830,iraq,derived,1
+831,iraq,intensified,1
+832,iraq,muslims,1
+833,iraq,mankind,1
+834,iraq,significant,1
+835,iraq,ethnic,1
+836,iraq,1968,1
+837,iraq,desert,1
+838,iraq,turkmen,1
+839,iraq,a,3
+840,iraq,kurdish,3
+841,iraq,land,1
+842,iraq,sassanid,1
+843,iraq,home,1
+844,iraq,6th,1
+845,iraq,hellenistic,1
+846,iraq,persian gulf,2
+847,iraq,km,1
+848,iraq,or,2
+849,iraq,amounts,1
+850,iraq,2005,1
+851,iraq,american,1
+852,iraq,the,43
+853,iraq,divided,1
+854,iraq,laws,1
