@@ -264,14 +264,17 @@ We want to make a program to “understand” the meaning of words in terms of o
 <p>Here's a replicated version of the dictionary experiment using Wikipedia. Tip: click the image and zoom to the branches.</p>
 <a href="assets/lt.pdf" alt="click to view"><img src="assets/2.png" width="80%"> </img></a>
 
-<p> Here's an example run through of the algorithim used to generate this:
-  make a table called links with the following structure: *source, *target, *weight
-  look up the word "Los Angeles",
-  split each word of the article by whitespace
-  set "Los Angeles" as source and connect it to each word
-  if this link alreaedy exists, increment the weight entry.
-  repeat
-</p>
+<p>Here&#39;s an example run through of the algorithim used to generate this:</p>
+
+<ul>
+	<li>&nbsp; make a table called links with the following structure: <strong>source</strong>, <strong>target</strong>, <strong>weight</strong></li>
+	<li>&nbsp; look up the word &quot;Los Angeles&quot; (origin or source word)</li>
+	<li>&nbsp; split each word of the article by whitespace</li>
+	<li>&nbsp; set &quot;Los Angeles&quot; as source and connect it to each word</li>
+	<li>&nbsp; if this link alreaedy exists, increment the weight entry.</li>
+	<li>&nbsp; repeat step 2 on every word in the article</li>
+</ul>
+
 
 <h2 class="section-heading">Topic Detection</h2>
 <p>The results with Wikipedia are impressive as they show two improvements: one, increased breadth (size of wiki vs size of dictionary api) and two, the increased complexity of each result. </p>
@@ -300,7 +303,7 @@ Here, the two sentences of "Los Angeles is a city in California" and "Los Angele
 <br>
 <p> Now since this is an AI project, assume the program is asked to complete this phrase: "United States of [...]" <br> Any human can obviously complete it with "America". However, looking at the model, it is unclear weather its "United States of Congo" or "United States of America" since both edges leading to "America" and "Congo" have the same weight. </p>
 
-<p>Thereby, while neurons that fire toghether do wire toghether, the brain must be able to somehow remember the specific route of neurons. This is absolutely essential, and it's a very big flaw in the technique described above. The program must be able to identify "United States of America" both on as one big thing, and also as the collection of "United", "States" "of", and "America". </p>
+<p>Thereby, while neurons that fire toghether do wire toghether, the brain must be able to somehow remember the specific route of neurons. </p> <p>This is absolutely essential, and it's a very big flaw in the technique described above. The program must be able to identify "United States of America" both as one big topic, as the collection of "United States", "of", and "America", and also as "United", "States" "of", and "America" as seperate words. </p>
                           </div>
                       </div>
                   </div>
