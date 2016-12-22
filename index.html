@@ -55,7 +55,10 @@ animation-duration: 1s;
   from {opacity:0;}
   to {opacity:1;}
 }
-
+.centered{
+    float: none;
+    margin: 0 auto;
+}
  .border{
    background: #ffffff none repeat scroll 0 0;
    content: "";
@@ -90,6 +93,11 @@ h2 {
     font-family: lato;
     margin-bottom: 5%;
     margin-top: 5%;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;          /* Likely future */
+cursor: default;
 }
 .intro-header {
     text-align:center;
@@ -106,16 +114,18 @@ p {
 margin:  0 0 25px;
 }
 
-
-#toc {
-  left: 50px;
+.toc-container{
+  float:none;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
   position: -o-sticky;
   position: sticky;
-    top: 30px;
-    width: 200px;
+
+}
+#toc {
+  left: 10px;
+  top: 30px;
 }
 
 h2{
@@ -124,6 +134,9 @@ h2{
   padding: 2%;
 }
 
+a > img {
+  cursor: zoom-in;
+}
 img {
   left:0;margin: 0 auto; position:relative ;display:block;
 }
@@ -189,13 +202,18 @@ text-align: center;
           </header>
 
 
+
+
               <!--  Content -->
               <div class="main">
-                <nav id="toc" class= "hidden-sm hidden-xs " data-toggle="toc"></nav>
+
+                <div class="toc-container col-xs-12 col-lg-3" >
+                  <nav id="toc" data-toggle="toc"></nav>
+                  </div>
 
                   <div class="container">
-                      <div class="row">
-                          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                          <div class="col-lg-8 col-md-10 centered">
 
                             <h2 class="section-heading">Preface</h2>
 
@@ -392,7 +410,7 @@ Unsupervised learning throws the training aspect out of the window. In other wor
                           </div>
                       </div>
                   </div>
-              </div>
+
 
 
 <!-- Footer -->
