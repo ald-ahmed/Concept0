@@ -261,8 +261,46 @@ We want to make a program to “understand” the meaning of words in terms of o
 
 <h2 class="section-heading">Expanding and Refining</h2>
 <p>A dictionary is nice, but I don't use it often. If I want to learn about something, I usually click the first Wikipedia link after searching for a topic on Google.</p>
-<p>Let's replicate the dictioanry experiment but replace the dictionary with Wikipedia. Warning: the following image might be overwhelming.</p>
+<p>Here's a replicated version of the dictionary experiment using Wikipedia. Tip: click the image and zoom to the branches.</p>
 <a href="assets/lt.pdf" alt="click to view"><img src="assets/2.png" width="80%"> </img></a>
+
+<p> Here's an example run through of the algorithim used to generate this:
+  make a table called links with the following structure: *source, *target, *weight
+  look up the word "Los Angeles",
+  split each word of the article by whitespace
+  set "Los Angeles" as source and connect it to each word
+  if this link alreaedy exists, increment the weight entry.
+  repeat
+</p>
+
+<h2 class="section-heading">Topic Detection</h2>
+<p>The results with Wikipedia are impressive as they show two improvements: one, increased breadth (size of wiki vs size of dictionary api) and two, the increased complexity of each result. </p>
+<p>In order to make use of these two additions, one must be able to "digest" each result in greater detail. Here, I will explore how to one might go about creating topic detection. This will allow the program to recognize "United States of America" instead of just "United", "States" "of", and "America" seperately. </p>
+
+<p>
+  In terms of code, each node and edge are represented by a hashtable of links. These links include the source or origin node, the target node, and the weight of the edge connecting them. The weight is simply the frequency of the target node appearing in the article.
+<p>
+The starting hypothesis behind this project assumed that each word can be viewed as a node connected by an edge, modeled after neurons that are connected by synapses. In neuroscience, Hebbian theory explains that neurons that fire toghether, wire toghether. </p>
+
+
+<p>As such, one can create a list of word pairs appearing in the article, and then increase the weights everytime they're encountered. In the end, and after many articles have been examined, one can sort this list of pairs by weight and see which pairs are likely to appear toghether. Allow me to illustrate:
+</p>
+
+  <a href="assets/pairs.png" alt="click to view"><img src="assets/pairs.png" width="80%"> </img></a>
+<br>
+<p>
+Here, the two sentences of "Los Angeles is a city in California" and "Los Angeles is large" are broken down to two word pairs. If the program picks the highest weighted pairs, then "Los Angeles" would be a topic and "Angeles is" would be another topic. Over many sentences, the connection between "Los" and "Angeles" would be very large compared to "Angeles" and "is".
+</p>
+
+<h2 class="section-heading">Improving Topic Detection</h2>
+
+<p> Assume, following the above method, the sentences "United States of America" and "Democratic Republic of Congo" appear exactly the same number of times (equal weights all throughout). Modeled using nodes and edges, here is how it would appear: </p>
+
+  <a href="assets/pairsflaw.png" alt="click to view"><img src="assets/pairsflaw.png" width="80%"> </img></a>
+<br>
+<p> Now since this is an AI project, assume the program is asked to complete this phrase: "United States of [...]" <br> Any human can obviously complete it with "America". However, looking at the model, it is unclear weather its "United States of Congo" or "United States of America" since both edges leading to "America" and "Congo" have the same weight. </p>
+
+<p>Thereby, while neurons that fire toghether do wire toghether, the brain must be able to somehow remember the specific route of neurons. This is absolutely essential, and it's a very big flaw in the technique described above. The program must be able to identify "United States of America" both on as one big thing, and also as the collection of "United", "States" "of", and "America". </p>
                           </div>
                       </div>
                   </div>
