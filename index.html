@@ -229,7 +229,7 @@ The question is, can we replicate this natural clustering that humans do in term
 We want to make a program to “understand” the meaning of words in terms of other words, and do so unsupervised. Such program can then be applied to many uses, such as summerizing text (more on that later).
 </p>
 
-<h2 class="section-heading">Step 1: Generating a Concept Map</h2>
+<h2 class="section-heading">Concept Map: Construction</h2>
 
 <p>Besides learning from friends or people around me, as a second English language learner, I often found myself using the dictionary to understand the meaning of words.</p>
 <p>Similarly, I propose the usage of a dictionary to allow the program to form connections. From intuition, any dictionary definition will either define words by using synonyms or by mentioning the components that make up the concept the word refers to.</p>
@@ -252,14 +252,14 @@ We want to make a program to “understand” the meaning of words in terms of o
     </p>
   </video>
 
-<h2 class="section-heading">Potential and Limitation</h2>
+<h2 class="section-heading">Concept Map: Potential and Limitation</h2>
 <p>What happened in the experiment above is that we replicated a very minor apparent mental process that people do when they seek to understand words. Of course, we are capable of much higher cognitive functions, so this program won&rsquo;t be able to understand the hierarchy of how words are structured just yet (&ldquo;water is a liquid and a liquid is a substance&rdquo;).</p>
 <p>What it can do, however, is read a dictionary and make semantic connections related to broad meaning and not just immediate synonyms.</p>
 <p>If refined and expanded, I think it can become an example of a reverse engineered dictionary: you ask it what a word means, and it will try to gather what type of connections is has and come up with a definition.</p>
 <p>Of course, such auto definer is not very useful, and I will not attempt to make it, but I mention it because I believe it entails is a step in the right direction.</p>
 <p>In order to build more useful applications, this map must be refined and expanded. The first step in this is using a different type of knowledge source in order to access more words and terms.</p>
 
-<h2 class="section-heading">Expanding and Refining</h2>
+<h2 class="section-heading">Concept Map: Expanding and Refining</h2>
 <p>A dictionary is nice, but I don't use it often. If I want to learn about something, I usually click the first Wikipedia link after searching for a topic on Google.</p>
 <p>Here's a replicated version of the dictionary experiment using Wikipedia. Tip: click the image and zoom to the branches.</p>
 <a href="assets/lt.pdf" alt="click to view"><img src="assets/2.png" width="80%"> </img></a>
@@ -284,7 +284,7 @@ We want to make a program to “understand” the meaning of words in terms of o
 
 </blockquote>
 
-<h2 class="section-heading">Topic Detection</h2>
+<h2 class="section-heading">Topic Detection: Word Pairs</h2>
 <p>The results with Wikipedia are impressive as they show two improvements: one, increased breadth (size of wiki vs. size of dictionary api) and two, the increased complexity of each result. </p>
 <p>In order to make use of these two additions, one must be able to "digest" each result in greater detail. Here, I will explore how to one might go about creating topic detection. This will allow the program to recognize "United States of America" instead of just "United", "States" "of", and "America" seperately. </p>
 
@@ -303,7 +303,7 @@ The starting hypothesis behind this project assumed that each word can be viewed
 Here, the two sentences of "Los Angeles is a city in California" and "Los Angeles is large" are broken down to two word pairs. If the program picks the highest weighted pairs, then "Los Angeles" would be a topic and "Angeles is" would be another topic. Over many sentences, the connection between "Los" and "Angeles" would be very large compared to "Angeles" and "is".
 </p>
 
-<h2 class="section-heading">Improving Topic Detection</h2>
+<h2 class="section-heading">Topic Detection: Aggregation</h2>
 
 <p> Assume, following the above method, the sentences "United States of America" and "Democratic Republic of Congo" appear exactly the same number of times (equal weights all throughout). Modeled using nodes and edges, here is how it would appear: </p>
 
@@ -337,8 +337,45 @@ Here, the two sentences of "Los Angeles is a city in California" and "Los Angele
 <p>  Notice the keyword strong connection. In the code, this is set to an edge weight higher than 1 (in other words, we have seen that word X come before Y more than once).  </p>
 
 
+<h2 class="section-heading">Topic Detection: Dealing with Non-Functional Words</h2>
 
-<h2 class="section-heading">Reflecting on Topic Detection</h2>
+
+<p>The above algorithim will generate large numbers of topics such as "city of" and "as in" given that words like "of", "as", "in", "the", etc., pair up with almost everything. In order to generate better topics, one must handle those non-functional words. Quick note: the specifics on what to keep and what not to keep in refining topic detection is a matter of choice at this point and will be used to illustrate unsupervised learning. The rule I will implement is as follows: </p>
+<blockquote>
+Topics must not have trailing non-functional words.
+</blockquote>
+
+<p> I chose this given rule just following some examples: from "city of" I just need "city", from "the united states" I just need "united states", and for "city of los angeles" I would want the entire thing. In order to implement this rule, one must be able to distinguish between a non-functional word and a functional word.</p>
+
+<h2 class="section-heading">Topic Detection: Refining Using DBSCAN</h2>
+
+<p> In machine learning, supervised learning means you let the machine run many trial and error gueses and "tip" it in the right direction, until it gets it right. For instance, a machine learning code trying to distinguish between a picture of a dog versus a picture of a cat will need a human to "train" it, or tell it which is which for X number of pictures until it can begin forming patterns that allow it to distinguish what makes a dog picture versus what makes a cat picture.</p>
+
+<p>
+Unsupervised learning throws the training aspect out of the window. In other words, you don't tell it whats a dog picture and whats a cat picture, you just ask it to come up with 2 catagories of pictures. The machine will then attempt to stastically seperate out the catagories. In the end, you give it a picture of a dog, and it tells you thats a picture of catagory 1, for instance.
+</p>
+
+<p> Unsupervised learning is hard to get right, and I doubt anyone uses it to catagorize animal pictures. However, how can one go about detecting non-functional word without supervision? I will begin by outlining some of the patterns I noticed regarding non-functional words.</p>
+
+<p> Recall the first dictionary example run. In it, most non-functional words were in the center becasue they were connected to almost every node. This hints that in any given article, the frequency of non-functional words will be high. </p>
+
+ <p> In terms of code however, even if one is to keep track of a word's frequency, how can it be used to distinguish between two catagories. Moreover, even relative frequency (frequency of a word divided by the total number of words seen), changes as you explore the articles. There's a shifting scale problem but frequency is certainly a good start. I graphed the frequencies of the words after examining a couple of articles: </p>
+   <br>
+   <a href="assets/freqgraph.png" alt="click to view"><img src="assets/freqgraph.png" width="80%"> </img></a>
+   <br>
+<p> As seen in the picture, the frequency of non-functional words is greatly larger than the other words. I will use this fact to build a unsupervised classifier.<p>
+
+<p>DBSCAN, or Density-based spatial clustering of applications with noise, is an unsupervised learning algorithim that divides data into catagories based on density. K-means is another unsupervised algorithim, but it requires clusters to be of equal size to work well. As seen in the graph, K-means is certainly not going to work given that the non-functional words are more of outliers than they are a cluster. </p>
+
+<p> <b>Quick note: I tried K-means, and it worked fine. However, DBSCAN had an unbelievable accuracy and I decided to go with that instead. </b></p>
+
+<p>Feeding the data into DBSCAN showed amazing accuracy, but it required a huge number of articles to detect "was" as a non-functional word (45 thousand articles). When I attempted to save the article data and run DBSCAN on it afterwards, my computer kept sending a kill signal to the code since it was using too much memory. </p>
+
+<p>I, as a human, didn't think I needed 45 thousand articles to see that "was" is a non-fucntional word, so why was the program struggling? After days of thinking, I found the solution when I realized that I had to introduce another feature to make the process more effiecent. This feauture was the "spread" or prevalency of the word. In other words, keep track of a number that answers the question "In how many diffrent articles did you see word X?". This was key, and after implementing this counter, I was able to detect more non-funtional words than I ever thought existed with just 800 articles. Now, I keep track of how frequency <b> and </b> how prevalent each word is. </p>
+
+<p> After implementing DBSCAN effectively, I implemented the rule of no trailing non-funtional words within topics. So far, I'm impressed with the results and would like to reflect on the process. <p>
+
+<h2 class="section-heading">Topic Detection: Reflection</h2>
 
 <p>While the solution offered above works, it seems a far shot away from the complex analysis the brain must be doing in understanding topics and the components of those topics. Yes, neurons that fire toghether wire toghether, and one can replicate this idea in code to generate two word pairs. However, because humans can conceptualize and tokenize on a variety of abstraction levels, the brain must be able to somehow remember the specific route of neurons. </p>
 <p>This is absolutely essential, and it's a missing gap in the technique described above since the program is simple taking the longest plausable combination of words and establishing them as a topic. </p>
@@ -349,7 +386,7 @@ Here, the two sentences of "Los Angeles is a city in California" and "Los Angele
 <p> This is clearly a problem of abstraction: how detailed or ("literal") do you want the program to see topics? Humans can switch abstraction levels easily. It is as such seen that when given a third grade test with the question "what is yellow and gives us heat", most AI stumbles; there are so many things that are yellow and give off heat to a computer.</p>
 
 <p> In any case, here's a more accurate model in my view. I think this mirrors the mental understanding of humans a lot more accurately since it shows different levels of abstraction, from elementary words to larger aggregations. In the future, a seperate graph that shows how topics are constructed can be made, enhancing the accuracy of the overall project. However, since I can't think of a current use, aggregating pairs into the most general possible topic will do. </p>
-<img src="assets/td1.png" width="30%"> </img> <br>
+<img src="assets/tdgraph.png" width="75%"> </img> <br>
 
 
                           </div>
