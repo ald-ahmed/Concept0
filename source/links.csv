@@ -1,339 +1,831 @@
 ID,Source,Target,Weight
-0,U.S._state,senators,2
-1,U.S._state,all,2
-2,U.S._state,least,1
-3,U.S._state,interpretation,1
-4,U.S._state,just,1
-5,U.S._state,on,1
-6,U.S._state,over,4
-7,U.S._state,jurisdiction,1
-8,U.S._state,county-equivalents,1
-9,U.S._state,entity,1
-10,U.S._state,four,1
-11,U.S._state,held,1
-12,U.S._state,through,1
-13,U.S._state,electors,1
-14,U.S._state,its,2
-15,U.S._state,tendency,1
-16,U.S._state,one,1
-17,U.S._state,republican,1
-18,U.S._state,grounded,1
-19,U.S._state,also,1
-20,U.S._state,most recent,2
-21,U.S._state,wyoming,1
-22,U.S._state,guaranteed,1
-23,U.S._state,except,1
-24,U.S._state,secede,1
-25,U.S._state,to,13
-26,U.S._state,governmental,1
-27,U.S._state,concerns,1
-28,U.S._state,unilaterally,1
-29,U.S._state,under,2
-30,U.S._state,covered,1
-31,U.S._state,sovereignty,3
-32,U.S._state,possess,1
-33,U.S._state,administrative,1
-34,U.S._state,texas,1
-35,U.S._state,square miles,2
-36,U.S._state,executive,1
-37,U.S._state,do,1
-38,U.S._state,them,1
-39,U.S._state,move,1
-40,U.S._state,widely,1
-41,U.S._state,provisions,1
-42,U.S._state,government,2
-43,U.S._state,number,3
-44,U.S._state,cannot,1
-45,U.S._state,they,1
-46,U.S._state,new,1
-47,U.S._state,not,1
-48,U.S._state,"3,140",1
-49,U.S._state,1959,1
-50,U.S._state,"1,717,860",1
-51,U.S._state,governments,1
-52,U.S._state,assigned,1
-53,U.S._state,term,1
-54,U.S._state,did,1
-55,U.S._state,decennial,1
-56,U.S._state,50,2
-57,U.S._state,admitted,1
-58,U.S._state,public,2
-59,U.S._state,whether,1
-60,U.S._state,individuals,1
-61,U.S._state,each,3
-62,U.S._state,well,1
-63,U.S._state,relation,1
-64,U.S._state,centralization,1
-65,U.S._state,intrastate,1
-66,U.S._state,commonwealth,1
-67,U.S._state,expanded,1
-68,U.S._state,single-member,1
-69,U.S._state,people,1
-70,U.S._state,senate,2
-71,U.S._state,house,3
-72,U.S._state,some,1
-73,U.S._state,principles,1
-74,U.S._state,authority,2
-75,U.S._state,proportion,1
-76,U.S._state,elected,1
-77,U.S._state,individual,1
-78,U.S._state,college,1
-79,U.S._state,are,13
-80,U.S._state,equal,1
-81,U.S._state,mandated,1
-82,U.S._state,after,1
-83,U.S._state,spouses,1
-84,U.S._state,funding,1
-85,U.S._state,"1,214",1
-86,U.S._state,for,2
-87,U.S._state,federal,3
-88,U.S._state,nature,1
-89,U.S._state,electoral,1
-90,U.S._state,representatives,3
-91,U.S._state,shares,1
-92,U.S._state,children,1
-93,U.S._state,federal government,4
-94,U.S._state,bicameral,1
-95,U.S._state,health,1
-96,U.S._state,select,1
-97,U.S._state,provides,1
-98,U.S._state,between,2
-99,U.S._state,shared,1
-100,U.S._state,consisting,2
-101,U.S._state,body,1
-102,U.S._state,be,1
-103,U.S._state,full,1
-104,U.S._state,transportation,1
-105,U.S._state,power,2
-106,U.S._state,state,10
-107,U.S._state,million,1
-108,U.S._state,continuing,1
-109,U.S._state,1776,1
-110,U.S._state,california,1
-111,U.S._state,although,1
-112,U.S._state,represented,2
-113,U.S._state,approval,1
-114,U.S._state,by,4
-115,U.S._state,counties,1
-116,U.S._state,legislature,1
-117,U.S._state,both,2
-118,U.S._state,38,1
-119,U.S._state,amended,1
-120,U.S._state,e.g,1
-121,U.S._state,ratifying,1
-122,U.S._state,of,23
-123,U.S._state,has been,2
-124,U.S._state,citizens,1
-125,U.S._state,v,1
-126,U.S._state,alaska,2
-127,U.S._state,range,1
-128,U.S._state,residency,1
-129,U.S._state,residents,1
-130,U.S._state,or,2
-131,U.S._state,judicial,1
-132,U.S._state,reside,1
-133,U.S._state,among,2
-134,U.S._state,tasks,1
-135,U.S._state,extent,1
-136,U.S._state,civil,1
-137,U.S._state,distributed,1
-138,U.S._state,into,2
-139,U.S._state,bound,1
-140,U.S._state,sovereign,1
-141,U.S._state,united states,5
-142,U.S._state,entitled,1
-143,U.S._state,grants,1
-144,U.S._state,americans,1
-145,U.S._state,names,1
-146,U.S._state,primarily,1
-147,U.S._state,vote,1
-148,U.S._state,allocated,1
-149,U.S._state,total,1
-150,U.S._state,custody,1
-151,U.S._state,legislative,1
-152,U.S._state,question,1
-153,U.S._state,use,1
-154,U.S._state,law,1
-155,U.S._state,from,6
-156,U.S._state,silent,1
-157,U.S._state,area,1
-158,U.S._state,union,3
-159,U.S._state,there,2
-160,U.S._state,political,1
-161,U.S._state,due,1
-162,U.S._state,been,1
-163,U.S._state,rhode,1
-164,U.S._state,regulation,1
-165,U.S._state,much,1
-166,U.S._state,structure,1
-167,U.S._state,elects,1
-168,U.S._state,constitutionally,1
-169,U.S._state,flexible,1
-170,U.S._state,white,1
-171,U.S._state,territory,1
-172,U.S._state,historically,1
-173,U.S._state,enforcement,1
-174,U.S._state,sharing,1
-175,U.S._state,infrastructure,1
-176,U.S._state,that,3
-177,U.S._state,hawaii,1
-178,U.S._state,debate,1
-179,U.S._state,but,1
-180,U.S._state,"663,268",1
-181,U.S._state,larger,1
-182,U.S._state,census,1
-183,U.S._state,paroled,1
-184,U.S._state,representative,1
-185,U.S._state,county,1
-186,U.S._state,constituent,1
-187,U.S._state,role,1
-188,U.S._state,with,3
-189,U.S._state,than,2
-190,U.S._state,population,1
-191,U.S._state,commerce,1
-192,U.S._state,13,1
-193,U.S._state,has,1
-194,U.S._state,divorced,1
-195,U.S._state,rights,3
-196,U.S._state,these,1
-197,U.S._state,local,3
-198,U.S._state,official,1
-199,U.S._state,war,1
-200,U.S._state,districts,1
-201,U.S._state,three,1
-202,U.S._state,island,1
-203,U.S._state,toward,1
-204,U.S._state,powers,2
-205,U.S._state,and,24
-206,U.S._state,supreme,1
-207,U.S._state,changed,1
-208,U.S._state,citizenship,1
-209,U.S._state,defined,1
-210,U.S._state,certain,1
-211,U.S._state,is,5
-212,U.S._state,it,1
-213,U.S._state,now,1
-214,U.S._state,general,1
-215,U.S._state,states,14
-216,U.S._state,as,1
-217,U.S._state,at,1
-218,U.S._state,have,4
-219,U.S._state,in,14
-220,U.S._state,education,1
-221,U.S._state,orders,1
-222,U.S._state,county-equivalent,1
-223,U.S._state,constitutions,1
-224,U.S._state,respective,1
-225,U.S._state,u.s,3
-226,U.S._state,court,2
-227,U.S._state,since,1
-228,U.S._state,no,1
-229,U.S._state,rather,1
-230,U.S._state,divided,1
-231,U.S._state,holds,1
-232,U.S._state,generally,1
-233,U.S._state,admit,1
-234,U.S._state,responsibilities,1
-235,U.S._state,members,1
-236,U.S._state,application,1
-237,U.S._state,varies,1
-238,U.S._state,other,1
-239,U.S._state,republic,1
-240,U.S._state,which,4
-241,U.S._state,so,1
-242,U.S._state,establishment,1
-243,U.S._state,"600,000",1
-244,U.S._state,km2,2
-245,U.S._state,convicts,1
-246,U.S._state,congress,2
-247,U.S._state,may,1
-248,U.S._state,who,1
-249,U.S._state,amendments,1
-250,U.S._state,each state,4
-251,U.S._state,persons,1
-252,U.S._state,two,1
-253,U.S._state,significant,1
-254,U.S._state,president,1
-255,U.S._state,america,1
-256,U.S._state,types,1
-257,U.S._state,constitution,4
-258,U.S._state,a,11
-259,U.S._state,branches,1
-260,U.S._state,considered,1
-261,U.S._state,required,1
-262,U.S._state,constitutional,1
-263,U.S._state,shortly,1
-264,U.S._state,together,1
-265,U.S._state,original,1
-266,U.S._state,their,3
-267,U.S._state,regulating,1
-268,U.S._state,withdraw,1
-269,U.S._state,time,1
-270,U.S._state,incorporation,1
-271,U.S._state,the,45
-272,U.S._state,geographic,1
-273,U.S._state,playing,1
-274,U.S._state,once,1
-275,a,and,4
-276,a,named,1
-277,a,vowel,1
-278,a,ɑ,1
-279,a,is,4
-280,a,it,3
-281,a,latter,1
-282,a,lower-case,1
-283,a,slanting,1
-284,a,as,2
-285,a,used,1
-286,a,ˈeɪ,1
-287,a,in,5
-288,a,consists,1
-289,a,based,1
-290,a,children,1
-291,a,upper-case,1
-292,a,ancient,1
-293,a,from,1
-294,a,double-storey,1
-295,a,also,1
-296,a,alphabet,1
-297,a,single-storey,1
-298,a,two,2
-299,a,by,2
-300,a,forms,1
-301,a,to,2
-302,a,written,1
-303,a,version,2
-304,a,which,1
-305,a,basic,1
-306,a,crossed,1
-307,a,plural,1
-308,a,handwriting,1
-309,a,be,2
-310,a,latin,1
-311,a,triangle,1
-312,a,intended,1
-313,a,type,1
-314,a,read,1
-315,a,italic,1
-316,a,letter,2
-317,a,alpha,1
-318,a,horizontal,1
-319,a,derives,1
-320,a,sides,1
-321,a,on,1
-322,a,aes,1
-323,a,bar,1
-324,a,especially,1
-325,a,middle,1
-326,a,a's,2
-327,a,fonts,2
-328,a,commonly,1
-329,a,greek,1
-330,a,iso,1
-331,a,can,1
-332,a,of,2
-333,a,found,1
-334,a,the,10
-335,a,similar,1
-336,a,or,1
-337,a,first,2
+0,U.S state,senators,2
+1,U.S state,all,2
+2,U.S state,least,1
+3,U.S state,interpretation,1
+4,U.S state,just,1
+5,U.S state,on,1
+6,U.S state,over,4
+7,U.S state,jurisdiction,1
+8,U.S state,county-equivalents,1
+9,U.S state,entity,1
+10,U.S state,four,1
+11,U.S state,held,1
+12,U.S state,through,1
+13,U.S state,electors,1
+14,U.S state,its,2
+15,U.S state,tendency,1
+16,U.S state,one,1
+17,U.S state,republican,1
+18,U.S state,grounded,1
+19,U.S state,also,1
+20,U.S state,most recent,2
+21,U.S state,wyoming,1
+22,U.S state,guaranteed,1
+23,U.S state,except,1
+24,U.S state,secede,1
+25,U.S state,to,13
+26,U.S state,governmental,1
+27,U.S state,concerns,1
+28,U.S state,unilaterally,1
+29,U.S state,under,2
+30,U.S state,covered,1
+31,U.S state,sovereignty,3
+32,U.S state,possess,1
+33,U.S state,administrative,1
+34,U.S state,texas,1
+35,U.S state,square miles,2
+36,U.S state,executive,1
+37,U.S state,do,1
+38,U.S state,them,1
+39,U.S state,move,1
+40,U.S state,widely,1
+41,U.S state,provisions,1
+42,U.S state,government,2
+43,U.S state,number,3
+44,U.S state,cannot,1
+45,U.S state,they,1
+46,U.S state,new,1
+47,U.S state,not,1
+48,U.S state,"3,140",1
+49,U.S state,1959,1
+50,U.S state,"1,717,860",1
+51,U.S state,governments,1
+52,U.S state,assigned,1
+53,U.S state,term,1
+54,U.S state,did,1
+55,U.S state,decennial,1
+56,U.S state,50,2
+57,U.S state,admitted,1
+58,U.S state,public,2
+59,U.S state,whether,1
+60,U.S state,individuals,1
+61,U.S state,each,3
+62,U.S state,well,1
+63,U.S state,relation,1
+64,U.S state,centralization,1
+65,U.S state,intrastate,1
+66,U.S state,commonwealth,1
+67,U.S state,expanded,1
+68,U.S state,single-member,1
+69,U.S state,people,1
+70,U.S state,senate,2
+71,U.S state,house,3
+72,U.S state,some,1
+73,U.S state,principles,1
+74,U.S state,authority,2
+75,U.S state,proportion,1
+76,U.S state,elected,1
+77,U.S state,individual,1
+78,U.S state,college,1
+79,U.S state,are,13
+80,U.S state,equal,1
+81,U.S state,mandated,1
+82,U.S state,after,1
+83,U.S state,spouses,1
+84,U.S state,funding,1
+85,U.S state,"1,214",1
+86,U.S state,for,2
+87,U.S state,federal,3
+88,U.S state,nature,1
+89,U.S state,electoral,1
+90,U.S state,representatives,3
+91,U.S state,shares,1
+92,U.S state,children,1
+93,U.S state,federal government,4
+94,U.S state,bicameral,1
+95,U.S state,health,1
+96,U.S state,select,1
+97,U.S state,provides,1
+98,U.S state,between,2
+99,U.S state,shared,1
+100,U.S state,consisting,2
+101,U.S state,body,1
+102,U.S state,be,1
+103,U.S state,full,1
+104,U.S state,transportation,1
+105,U.S state,power,2
+106,U.S state,state,10
+107,U.S state,million,1
+108,U.S state,continuing,1
+109,U.S state,1776,1
+110,U.S state,california,1
+111,U.S state,although,1
+112,U.S state,represented,2
+113,U.S state,approval,1
+114,U.S state,by,4
+115,U.S state,counties,1
+116,U.S state,legislature,1
+117,U.S state,both,2
+118,U.S state,38,1
+119,U.S state,amended,1
+120,U.S state,e.g,1
+121,U.S state,ratifying,1
+122,U.S state,of,23
+123,U.S state,citizens,1
+124,U.S state,v,1
+125,U.S state,alaska,2
+126,U.S state,range,1
+127,U.S state,residency,1
+128,U.S state,residents,1
+129,U.S state,or,2
+130,U.S state,judicial,1
+131,U.S state,reside,1
+132,U.S state,among,2
+133,U.S state,tasks,1
+134,U.S state,extent,1
+135,U.S state,civil,1
+136,U.S state,distributed,1
+137,U.S state,into,2
+138,U.S state,bound,1
+139,U.S state,sovereign,1
+140,U.S state,united states,5
+141,U.S state,entitled,1
+142,U.S state,grants,1
+143,U.S state,americans,1
+144,U.S state,names,1
+145,U.S state,primarily,1
+146,U.S state,vote,1
+147,U.S state,allocated,1
+148,U.S state,total,1
+149,U.S state,custody,1
+150,U.S state,legislative,1
+151,U.S state,question,1
+152,U.S state,use,1
+153,U.S state,law,1
+154,U.S state,from,6
+155,U.S state,silent,1
+156,U.S state,area,1
+157,U.S state,union,3
+158,U.S state,there,2
+159,U.S state,political,1
+160,U.S state,due,1
+161,U.S state,been,3
+162,U.S state,rhode,1
+163,U.S state,regulation,1
+164,U.S state,much,1
+165,U.S state,structure,1
+166,U.S state,elects,1
+167,U.S state,constitutionally,1
+168,U.S state,flexible,1
+169,U.S state,white,1
+170,U.S state,territory,1
+171,U.S state,historically,1
+172,U.S state,enforcement,1
+173,U.S state,sharing,1
+174,U.S state,infrastructure,1
+175,U.S state,that,3
+176,U.S state,hawaii,1
+177,U.S state,debate,1
+178,U.S state,but,1
+179,U.S state,"663,268",1
+180,U.S state,larger,1
+181,U.S state,census,1
+182,U.S state,paroled,1
+183,U.S state,representative,1
+184,U.S state,county,1
+185,U.S state,constituent,1
+186,U.S state,role,1
+187,U.S state,with,3
+188,U.S state,than,2
+189,U.S state,population,1
+190,U.S state,commerce,1
+191,U.S state,13,1
+192,U.S state,has,3
+193,U.S state,divorced,1
+194,U.S state,rights,3
+195,U.S state,these,1
+196,U.S state,local,3
+197,U.S state,official,1
+198,U.S state,war,1
+199,U.S state,districts,1
+200,U.S state,three,1
+201,U.S state,island,1
+202,U.S state,toward,1
+203,U.S state,powers,2
+204,U.S state,and,24
+205,U.S state,supreme,1
+206,U.S state,changed,1
+207,U.S state,citizenship,1
+208,U.S state,defined,1
+209,U.S state,certain,1
+210,U.S state,is,5
+211,U.S state,it,1
+212,U.S state,now,1
+213,U.S state,general,1
+214,U.S state,states,14
+215,U.S state,as,1
+216,U.S state,at,1
+217,U.S state,have,4
+218,U.S state,in,14
+219,U.S state,education,1
+220,U.S state,orders,1
+221,U.S state,county-equivalent,1
+222,U.S state,constitutions,1
+223,U.S state,respective,1
+224,U.S state,u.s,3
+225,U.S state,court,2
+226,U.S state,since,1
+227,U.S state,no,1
+228,U.S state,rather,1
+229,U.S state,divided,1
+230,U.S state,holds,1
+231,U.S state,generally,1
+232,U.S state,admit,1
+233,U.S state,responsibilities,1
+234,U.S state,members,1
+235,U.S state,application,1
+236,U.S state,varies,1
+237,U.S state,other,1
+238,U.S state,republic,1
+239,U.S state,which,4
+240,U.S state,so,1
+241,U.S state,establishment,1
+242,U.S state,"600,000",1
+243,U.S state,km2,2
+244,U.S state,convicts,1
+245,U.S state,congress,2
+246,U.S state,may,1
+247,U.S state,who,1
+248,U.S state,amendments,1
+249,U.S state,each state,4
+250,U.S state,persons,1
+251,U.S state,two,1
+252,U.S state,significant,1
+253,U.S state,president,1
+254,U.S state,america,1
+255,U.S state,types,1
+256,U.S state,constitution,4
+257,U.S state,a,11
+258,U.S state,branches,1
+259,U.S state,considered,1
+260,U.S state,required,1
+261,U.S state,constitutional,1
+262,U.S state,shortly,1
+263,U.S state,together,1
+264,U.S state,original,1
+265,U.S state,their,3
+266,U.S state,regulating,1
+267,U.S state,withdraw,1
+268,U.S state,time,1
+269,U.S state,incorporation,1
+270,U.S state,the,45
+271,U.S state,geographic,1
+272,U.S state,playing,1
+273,U.S state,once,1
+274,a,and,4
+275,a,named,1
+276,a,vowel,1
+277,a,ɑ,1
+278,a,is,4
+279,a,it,3
+280,a,latter,1
+281,a,lower-case,1
+282,a,slanting,1
+283,a,as,2
+284,a,used,1
+285,a,ˈeɪ,1
+286,a,in,5
+287,a,consists,1
+288,a,based,1
+289,a,children,1
+290,a,upper-case,1
+291,a,ancient,1
+292,a,from,1
+293,a,double-storey,1
+294,a,also,1
+295,a,alphabet,1
+296,a,single-storey,1
+297,a,two,2
+298,a,by,2
+299,a,forms,1
+300,a,to,2
+301,a,written,1
+302,a,version,2
+303,a,which,1
+304,a,basic,1
+305,a,crossed,1
+306,a,plural,1
+307,a,handwriting,1
+308,a,be,2
+309,a,latin,1
+310,a,triangle,1
+311,a,intended,1
+312,a,type,1
+313,a,read,1
+314,a,italic,1
+315,a,letter,2
+316,a,alpha,1
+317,a,horizontal,1
+318,a,derives,1
+319,a,sides,1
+320,a,on,1
+321,a,aes,1
+322,a,bar,1
+323,a,especially,1
+324,a,middle,1
+325,a,a's,2
+326,a,fonts,2
+327,a,commonly,1
+328,a,greek,1
+329,a,iso,1
+330,a,can,1
+331,a,of,2
+332,a,found,1
+333,a,the,10
+334,a,similar,1
+335,a,or,1
+336,a,first,2
+337,iraq,tigris,2
+338,iraq,iraqi,2
+339,iraq,from,5
+340,iraq,roman,1
+341,iraq,kawliya,1
+342,iraq,yazidis,1
+343,iraq,held,1
+344,iraq,fighters,1
+345,iraq,al-arab,1
+346,iraq,through,1
+347,iraq,ottoman,2
+348,iraq,its,1
+349,iraq,rashidun,1
+350,iraq,northern,1
+351,iraq,95,1
+352,iraq,insurgency,1
+353,iraq,encompasses,1
+354,iraq,bordered,1
+355,iraq,created,1
+356,iraq,languages,1
+357,iraq,to,9
+358,iraq,millennium,1
+359,iraq,under,2
+360,iraq,uruk,1
+361,iraq,include,1
+362,iraq,2011,1
+363,iraq,alluvial,1
+364,iraq,southwest,1
+365,iraq,kingdom,2
+366,iraq,assyrian,1
+367,iraq,around,1
+368,iraq,was,9
+369,iraq,read,1
+370,iraq,hussein's,1
+371,iraq,between,1
+372,iraq,arab,1
+373,iraq,baghdad,1
+374,iraq,were,2
+375,iraq,mandate,1
+376,iraq,sunni,1
+377,iraq,1958,1
+378,iraq,overthrown,1
+379,iraq,babylonian,1
+380,iraq,northwestern,1
+381,iraq,58,1
+382,iraq,parthian,1
+383,iraq,median,1
+384,iraq,these,1
+385,iraq,miles,1
+386,iraq,saudi,1
+387,iraq,sèvres,1
+388,iraq,yezidism,1
+389,iraq,ayyubid,1
+390,iraq,referred,1
+391,iraq,often,1
+392,iraq,mandeans,1
+393,iraq,akkadian,1
+394,iraq,spilled,1
+395,iraq,euphrates,2
+396,iraq,rivers,3
+397,iraq,sumerian,1
+398,iraq,1921,1
+399,iraq,are,3
+400,iraq,run,1
+401,iraq,empire,1
+402,iraq,nations,1
+403,iraq,empires,2
+404,iraq,established,1
+405,iraq,afsharid,1
+406,iraq,has,2
+407,iraq,kuwait,1
+408,iraq,since,1
+409,iraq,asia,1
+410,iraq,ended,1
+411,iraq,saddam,1
+412,iraq,cradle,1
+413,iraq,zagros,1
+414,iraq,monarchy,2
+415,iraq,capital,1
+416,iraq,league,1
+417,iraq,officially,1
+418,iraq,independence,1
+419,iraq,measuring,1
+420,iraq,mandeanism,1
+421,iraq,iran,1
+422,iraq,power,1
+423,iraq,bc,1
+424,iraq,demarcated,1
+425,iraq,million,1
+426,iraq,here,1
+427,iraq,notably,1
+428,iraq,southeast,1
+429,iraq,coastline,1
+430,iraq,groups,1
+431,iraq,others,1
+432,iraq,yarsan,1
+433,iraq,by,5
+434,iraq,multi-party,1
+435,iraq,gained,1
+436,iraq,on,1
+437,iraq,allies,1
+438,iraq,safavid,1
+439,iraq,of,14
+440,iraq,region,1
+441,iraq,citizens,1
+442,iraq,36,2
+443,iraq,british,1
+444,iraq,mesopotamian,1
+445,iraq,range,1
+446,iraq,aɪˈræk,1
+447,iraq,achaemenid,1
+448,iraq,syria,1
+449,iraq,country's,1
+450,iraq,south,2
+451,iraq,first,1
+452,iraq,major,1
+453,iraq,fertile,1
+454,iraq,presence,1
+455,iraq,into,2
+456,iraq,successive,1
+457,iraq,united states,1
+458,iraq,shatt,1
+459,iraq,turkey,1
+460,iraq,city,1
+461,iraq,cities,1
+462,iraq,assyrians,1
+463,iraq,area,1
+464,iraq,west,1
+465,iraq,create,1
+466,iraq,ba'ath party,2
+467,iraq,two,1
+468,iraq,been,1
+469,iraq,christianity,1
+470,iraq,circassians,1
+471,iraq,live,1
+472,iraq,until,1
+473,iraq,borders,1
+474,iraq,kurds,1
+475,iraq,arabs,1
+476,iraq,main,1
+477,iraq,shia,1
+478,iraq,north,1
+479,iraq,komari,1
+480,iraq,mostly,1
+481,iraq,eastern,1
+482,iraq,government,1
+483,iraq,shabakis,1
+484,iraq,but,1
+485,iraq,elections,1
+486,iraq,part,2
+487,iraq,jordan,1
+488,iraq,western,1
+489,iraq,invasion,1
+490,iraq,known,2
+491,iraq,removed,1
+492,iraq,with,2
+493,iraq,present,1
+494,iraq,1920,1
+495,iraq,east,1
+496,iraq,ɪˈræk,1
+497,iraq,plain,1
+498,iraq,socialist,1
+499,iraq,official,1
+500,iraq,britain,1
+501,iraq,civilisations,1
+502,iraq,historically,1
+503,iraq,placed,1
+504,iraq,near,1
+505,iraq,jumhūrīyyat,1
+506,iraq,mesopotamia,2
+507,iraq,country,2
+508,iraq,treaty,1
+509,iraq,mongol,1
+510,iraq,and,18
+511,iraq,organised,1
+512,iraq,is,4
+513,iraq,in,10
+514,iraq,it,2
+515,iraq,an,2
+516,iraq,continued,1
+517,iraq,umayyad,1
+518,iraq,as,5
+519,iraq,civil war,1
+520,iraq,eraq,2
+521,iraq,arabia,1
+522,iraq,controlled,1
+523,iraq,arabic,3
+524,iraq,iraq's,1
+525,iraq,syrian,2
+526,iraq,authority,1
+527,iraq,parliamentary,1
+528,iraq,mountain,1
+529,iraq,united,1
+530,iraq,end,1
+531,iraq,2003,2
+532,iraq,provide,1
+533,iraq,began,1
+534,iraq,that,1
+535,iraq,when,1
+536,iraq,armenians,1
+537,iraq,write,1
+538,iraq,also,2
+539,iraq,republic,2
+540,iraq,which,1
+541,iraq,largest,1
+542,iraq,civilisation,1
+543,iraq,abbasid,1
+544,iraq,1932,1
+545,iraq,centre,1
+546,iraq,modern,1
+547,iraq,after,1
+548,iraq,derived,1
+549,iraq,intensified,1
+550,iraq,muslims,1
+551,iraq,mankind,1
+552,iraq,significant,1
+553,iraq,ethnic,1
+554,iraq,1968,1
+555,iraq,desert,1
+556,iraq,turkmen,1
+557,iraq,a,3
+558,iraq,kurdish,3
+559,iraq,land,1
+560,iraq,sassanid,1
+561,iraq,home,1
+562,iraq,6th,1
+563,iraq,hellenistic,1
+564,iraq,persian gulf,2
+565,iraq,km,1
+566,iraq,or,2
+567,iraq,amounts,1
+568,iraq,2005,1
+569,iraq,american,1
+570,iraq,the,43
+571,iraq,divided,1
+572,iraq,laws,1
+573,arabic,concepts,1
+574,arabic,lingua,1
+575,arabic,words,1
+576,arabic,proximity,1
+577,arabic,both,2
+578,arabic,mainly,2
+579,arabic,major,1
+580,arabic,years,1
+581,arabic,european languages,3
+582,arabic,purely,1
+583,arabic,through,1
+584,arabic,during,1
+585,arabic,urdu,1
+586,arabic,ottoman,1
+587,arabic,still,1
+588,arabic,religious,1
+589,arabic,its,1
+590,arabic,hebrew,1
+591,arabic,islam,1
+592,arabic,26,1
+593,arabic,grammatical,2
+594,arabic,quranic arabic,2
+595,arabic,94,1
+596,arabic,languages,5
+597,arabic,reasons,1
+598,arabic,most-spoken,2
+599,arabic,degrees,1
+600,arabic,east,1
+601,arabic,left-to-right,1
+602,arabic,borrowed,2
+603,arabic,indonesian,1
+604,arabic,greater,1
+605,arabic,means,1
+606,arabic,quran,1
+607,arabic,arab,1
+608,arabic,they,1
+609,arabic,mathematics,1
+610,arabic,schools,1
+611,arabic,world,1
+612,arabic,now,1
+613,arabic,formal,1
+614,arabic,maldivian,1
+615,arabic,term,1
+616,arabic,liturgical language,2
+617,arabic,like,1
+618,arabic,follows,1
+619,arabic,standards,1
+620,arabic,discarded,1
+621,arabic,right-to-left,1
+622,arabic,found,1
+623,arabic,referred,1
+624,arabic,balkan,1
+625,arabic,portuguese,1
+626,arabic,billion,1
+627,arabic,classical,1
+628,arabic,acquired,1
+629,arabic,globe,1
+630,arabic,modern times,2
+631,arabic,some,4
+632,arabic,around,1
+633,arabic,constitute,2
+634,arabic,culture,2
+635,arabic,see,1
+636,arabic,taught,1
+637,arabic,are,4
+638,arabic,nations,1
+639,arabic,philosophy,1
+640,arabic,centuries,1
+641,arabic,universities,1
+642,arabic,living,1
+643,arabic,modern standard arabic,2
+644,arabic,literary arabic,2
+645,arabic,for,1
+646,arabic,pashto,1
+647,arabic,sociolinguistic,1
+648,arabic,written,5
+649,arabic,new,2
+650,arabic,422,1
+651,arabic,constructions,2
+652,arabic,europe,1
+653,arabic,be,2
+654,arabic,latin,2
+655,arabic,christian,1
+656,arabic,tagalog,1
+657,arabic,initially,1
+658,arabic,million,2
+659,arabic,however,1
+660,arabic,french,1
+661,arabic,aramaic,1
+662,arabic,although,1
+663,arabic,early,1
+664,arabic,grouped together,2
+665,arabic,by,1
+666,arabic,on,1
+667,arabic,central,1
+668,arabic,language,8
+669,arabic,english,1
+670,arabic,of,16
+671,arabic,script,1
+672,arabic,united,1
+673,arabic,commonly,1
+674,arabic,al-andalus,1
+675,arabic,counterpart,1
+676,arabic,mutually,1
+677,arabic,semitic,1
+678,arabic,hausa,1
+679,arabic,whole,1
+680,arabic,or,3
+681,arabic,south,1
+682,arabic,grounds,1
+683,arabic,origin,1
+684,arabic,named,1
+685,arabic,spoken,2
+686,arabic,arab world,2
+687,arabic,africa,1
+688,arabic,number,1
+689,arabic,one,3
+690,arabic,medieval,1
+691,arabic,civilizations,1
+692,arabic,muslim,1
+693,arabic,spanish,1
+694,arabic,throughout,1
+695,arabic,ancient,1
+696,arabic,from,7
+697,arabic,would,2
+698,arabic,to,7
+699,arabic,west,1
+700,arabic,influence,1
+701,arabic,franca,1
+702,arabic,political,1
+703,arabic,ʻarabiyy,1
+704,arabic,adopted,1
+705,arabic,many languages including,1
+706,arabic,much,2
+707,arabic,anti-lebanon,1
+708,arabic,hindi,1
+709,arabic,which,2
+710,arabic,linguistic,1
+711,arabic,especially,2
+712,arabic,was,2
+713,arabic,arabs,1
+714,arabic,more,1
+715,arabic,mountains,1
+716,arabic,modern,1
+717,arabic,standardized,1
+718,arabic,mostly,1
+719,arabic,that,4
+720,arabic,bosnian,1
+721,arabic,government,1
+722,arabic,vehicle,1
+723,arabic,malay,1
+724,arabic,but,1
+725,arabic,workplaces,1
+726,arabic,peninsula,1
+727,arabic,bengali,1
+728,arabic,varying,1
+729,arabic,known,1
+730,arabic,turkish,2
+731,arabic,an,1
+732,arabic,with,4
+733,arabic,than,2
+734,arabic,arisen,1
+735,arabic,longer,1
+736,arabic,parts,1
+737,arabic,has,4
+738,arabic,syriac,1
+739,arabic,this,1
+740,arabic,science,1
+741,arabic,official,1
+742,arabic,likely,2
+743,arabic,sinai,1
+744,arabic,below,1
+745,arabic,persian,2
+746,arabic,era,1
+747,arabic,iron,1
+748,arabic,many,2
+749,arabic,making,1
+750,arabic,mesopotamia,1
+751,arabic,punjabi,1
+752,arabic,history,1
+753,arabic,and,24
+754,arabic,1.6,1
+755,arabic,sometimes,1
+756,arabic,many languages,1
+757,arabic,orthography,1
+758,arabic,certain,1
+759,arabic,is,15
+760,arabic,describe,1
+761,arabic,ages,1
+762,arabic,it,7
+763,arabic,denote,1
+764,arabic,states,1
+765,arabic,middle,1
+766,arabic,as,6
+767,arabic,owing,1
+768,arabic,have,4
+769,arabic,in,22
+770,arabic,seen,1
+771,arabic,languages including,1
+772,arabic,ascii,1
+773,arabic,any,2
+774,arabic,if,2
+775,arabic,result,1
+776,arabic,influenced,2
+777,arabic,speakers,2
+778,arabic,unintelligible,1
+779,arabic,single language,2
+780,arabic,variety,1
+781,arabic,perhaps,1
+782,arabic,media,1
+783,arabic,six,2
+784,arabic,official languages,1
+785,arabic,same,1
+786,arabic,contact,1
+787,arabic,also,5
+788,arabic,other,1
+789,arabic,post-quranic,1
+790,arabic,widely,1
+791,arabic,peoples,1
+792,arabic,sindhi,1
+793,arabic,native,2
+794,arabic,european,1
+795,arabic,al-ʻarabiyyah,1
+796,arabic,used,3
+797,arabic,many words,2
+798,arabic,afroasiatic,1
+799,arabic,vocabulary,6
+800,arabic,separate,1
+801,arabic,after,1
+802,arabic,derived,1
+803,arabic,iberian,1
+804,arabic,most,2
+805,arabic,northwestern arabia,2
+806,arabic,muslims,1
+807,arabic,uses,1
+808,arabic,two,1
+809,arabic,significant,1
+810,arabic,egyptian,1
+811,arabic,kazakh,1
+812,arabic,times,1
+813,arabic,a,10
+814,arabic,kurdish,2
+815,arabic,800,1
+816,arabic,varieties,2
+817,arabic,largely,1
+818,arabic,considered,3
+819,arabic,age,1
+820,arabic,no,2
+821,arabic,contemporary,1
+822,arabic,abjad,1
+823,arabic,greek,3
+824,arabic,orally,1
+825,arabic,alphabet,1
+826,arabic,the,35
+827,arabic,first,1
+828,arabic,non-native,1
+829,arabic,spoken varieties,4

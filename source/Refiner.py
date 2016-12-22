@@ -118,11 +118,14 @@ class Refiner:
         return self.links
 
     def addToAllSpheres(self, list):
+        newSphereUpdateSpread = {}
         for newSphere in list:
             all.nonuniquecount += 1
             if newSphere in all.Spheres:
                 all.Spheres[newSphere][0] += 1
-                all.Spheres[newSphere][2] += 1
+                if newSphere not in newSphereUpdateSpread:
+                    all.Spheres[newSphere][2] += 1
+                    newSphereUpdateSpread[newSphere]=1
             else:
                 all.Spheres[newSphere] = [1, 0, 1]
 
