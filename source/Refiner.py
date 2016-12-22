@@ -21,10 +21,10 @@ class Refiner:
         self.query = word
         self.getContent(word)
         self.createSpheresFromText()
-        self.addToSpheres(self.spheres)
         self.updatePairs()
         if td:
             self.recreateSpheres()
+        self.addToAllSpheres(self.spheres)
         self.createLinks()
 
     def __del__(self):
@@ -117,7 +117,7 @@ class Refiner:
 
         return self.links
 
-    def addToSpheres(self, list):
+    def addToAllSpheres(self, list):
         for newSphere in list:
             all.nonuniquecount += 1
             if newSphere in all.Spheres:
@@ -127,7 +127,7 @@ class Refiner:
                 all.Spheres[newSphere] = [1, 0, 1]
 
     def createSpheresFromText(self):
-
+        #print self.extract
         extract = self.extract.replace('—', ' ')
 
         regex = "[^\w ]"
@@ -152,7 +152,11 @@ class Refiner:
                             + query +
                             '&redirects=1')
         jsonData = data.json()
-        pageNumber = jsonData['query']['pages'].keys()[0]
+
+        try:
+            pageNumber = jsonData['query']['pages'].keys()[0]
+        except:
+            return -1
 
         if pageNumber == '-1':
             print 'Entry not found'
@@ -160,7 +164,7 @@ class Refiner:
 
         extract = jsonData['query']['pages'][pageNumber]['extract']
 
-        if "may refer to" in extract or (len(extract) is 0):
+        if "may refer to" in extract or (len(extract) < len(query)+10):
             print 'Entry redirects'
             # print extract
             return -1

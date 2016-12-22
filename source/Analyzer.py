@@ -7,6 +7,7 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 import pylab as pl
 import csv
+import cPickle as pickle
 
 allLinks = []  # all the source - target - weight links that have been created
 
@@ -81,13 +82,11 @@ def unsupervisedMagic():
 
 # start at what, end at what, and 1 or 0 for topic detection
 def searchTree(i, length, td):
-    if i == length:
-        return
-
     query = all.Spheres.keys()[i]
+
+
     newWord = Refiner(query, td)
     print i
-
     if newWord.done is 1:
         if all.Spheres[newWord.links[0]['source']][1] != 1:
             allLinks.extend(newWord.links)
@@ -96,30 +95,56 @@ def searchTree(i, length, td):
         all.Spheres[query][1] = 1
 
     newWord.deleteAll()
-    searchTree(i + 1, length, td)
+
+    if i != length:
+        return searchTree(i + 1, length, td)
+    else:
+        return i
+
+
+def runner():
+    keepGoing = 1
+    all.Spheres['middle east'] = [1, 0, 0]
+    counter = 0
+    while keepGoing:
+        counter = searchTree(counter, (counter + 100), 0)
+        saveVariables()
+        if counter > 45000:
+            keepGoing=0
+
+def saveVariables():
+    pickle.dump(all.Spheres, open("spheres.p", "wb"))
+    pickle.dump(all.nonuniquecount, open("nonuniquecount.p", "wb"))
+
+def loadVariables():
+    all.Spheres = pickle.load(open("spheres.p", "rb"))
+    all.nonuniquecount = pickle.load(open("nonuniquecount.p", "rb"))
 
 
 t1 = time.time()
 
 all.init()
 
-all.Spheres['middle east'] = [1, 0, 0]
+
+try:
+    loadVariables()
+    print "Previously saved data loaded."
+    print len(all.Spheres)
+    #runner()
+    #saveVariables()
+
+except (OSError, IOError) as e:
+    print "No previously saved data found."
+    runner()
+    saveVariables()
 
 
-while 1:
-    if "was" in all.functionalChart:
-        if all.functionalChart["was"]==1:
-            break
-    if len(all.Spheres)>31:
-        searchTree(len(all.Spheres)-30, len(all.Spheres)-30+ 500, 0)
-    else:
-        searchTree(len(all.Spheres) - 1, len(all.Spheres) - 1+500, 0)
-    unsupervisedMagic()
+unsupervisedMagic()
 
 
 all.reset()
 
-all.Spheres['iraq'] = [1, 0, 1]
+all.Spheres['U.S._state'] = [1, 0, 1]
 searchTree(len(all.Spheres) - 1, 2, 1)
 
 # pprint(allLinks)
