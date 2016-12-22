@@ -266,18 +266,26 @@ We want to make a program to “understand” the meaning of words in terms of o
 
 <p>Here&#39;s an example run through of the algorithim used to generate this:</p>
 
-<ul>
-	<li>&nbsp; make a table called links with the following structure: <strong>source</strong>, <strong>target</strong>, <strong>weight</strong></li>
-	<li>&nbsp; look up the word &quot;Los Angeles&quot; (origin or source word)</li>
-	<li>&nbsp; split each word of the article by whitespace</li>
-	<li>&nbsp; set &quot;Los Angeles&quot; as source and connect it to each word</li>
-	<li>&nbsp; if this link alreaedy exists, increment the weight entry.</li>
-	<li>&nbsp; repeat step 2 on every word in the article</li>
-</ul>
+<blockquote>
+<p>Assuming you have a list of hashtables called links with the following structure:&nbsp;<strong>source</strong>,&nbsp;<strong>target</strong>,&nbsp;<strong>weight</strong>
+</p>
+  <ol>
+    <li>
+      &nbsp; Look up the word &quot;Los Angeles&quot; (origin or source word)</li>
+    <li>
+      &nbsp; Split each word of the article by whitespace</li>
+    <li>
+      &nbsp; Set &quot;Los Angeles&quot; as source and connect it to each word</li>
+    <li>
+      &nbsp; If this link alreaedy exists, increment the weight entry.</li>
+    <li>
+      &nbsp; Repeat step 1 on every word in the article</li>
+  </ol>
 
+</blockquote>
 
 <h2 class="section-heading">Topic Detection</h2>
-<p>The results with Wikipedia are impressive as they show two improvements: one, increased breadth (size of wiki vs size of dictionary api) and two, the increased complexity of each result. </p>
+<p>The results with Wikipedia are impressive as they show two improvements: one, increased breadth (size of wiki vs. size of dictionary api) and two, the increased complexity of each result. </p>
 <p>In order to make use of these two additions, one must be able to "digest" each result in greater detail. Here, I will explore how to one might go about creating topic detection. This will allow the program to recognize "United States of America" instead of just "United", "States" "of", and "America" seperately. </p>
 
 <p>
@@ -303,13 +311,46 @@ Here, the two sentences of "Los Angeles is a city in California" and "Los Angele
 <br>
 <p> Now since this is an AI project, assume the program is asked to complete this phrase: "United States of [...]" <br> Any human can obviously complete it with "America". However, looking at the model, it is unclear weather its "United States of Congo" or "United States of America" since both edges leading to "America" and "Congo" have the same weight. </p>
 
-<p>Thereby, while neurons that fire toghether do wire toghether, the brain must be able to somehow remember the specific route of neurons. </p>
+<p>In current implementation, this issue is solved by aggregating pairs that have strong connections. This means that one must begin with a list of pairs alike the one above. Here's the puedocode:
 
-<p>This is absolutely essential, and it's a missing gap in the technique described above. </p>
-<p>The program must be able to identify "United States of America" both as one big topic, as the collection of "United States", "of", and "America", and also as "United", "States" "of", and "America" as seperate words. </p>
-<img src="assets/td2.png" width="30%"> </img>
-<img src="assets/td3.png" width="30%"> </img>
-<img src="assets/td1.png" width="30%"> </img>
+</p>
+
+<blockquote>
+<p>Assuming you have a word pair list (the one above), an empty list called buffer, and given
+  "United States of America is":
+</p>
+  <ol>
+  			<li>
+  				&nbsp;Examine &quot;United&quot; and &quot;States&quot;, if there&#39;s a strong connection, add them to buffer</li>
+  			<li>
+  				&nbsp;Now examine &quot;States&quot; and &quot;of&quot;, if there&#39;s a strong connection, add &quot;of&quot; to buffer</li>
+  			<li>
+  				&nbsp;Examine &quot;of&quot; and &quot;America&quot;,&nbsp;if there&#39;s a strong connection, add &quot;America&quot; to buffer</li>
+  			<li>
+  				&nbsp;Examine&nbsp;&quot;America&quot; and &quot;is&quot;, if there&#39;s a strong connection, add &quot;is&quot; to buffer</li>
+  			<li>
+  				&nbsp;&quot;America&quot; and &quot;is&quot; don&#39;t have a strong connection, therefore, stop and establish the contents of buffer as a topic (&quot;United States of America&quot;)</li>
+  		</ol>
+
+</blockquote>
+
+<p>  Notice the keyword strong connection. In the code, this is set to an edge weight higher than 1 (in other words, we have seen that word X come before Y more than once).  </p>
+
+
+
+<h2 class="section-heading">Reflecting on Topic Detection</h2>
+
+<p>While the solution offered above works, it seems a far shot away from the complex analysis the brain must be doing in understanding topics and the components of those topics. Yes, neurons that fire toghether wire toghether, and one can replicate this idea in code to generate two word pairs. However, because humans can conceptualize and tokenize on a variety of abstraction levels, the brain must be able to somehow remember the specific route of neurons. </p>
+<p>This is absolutely essential, and it's a missing gap in the technique described above since the program is simple taking the longest plausable combination of words and establishing them as a topic. </p>
+<p>In order to truly conceptualize, the program must be able to identify "United States of America" both as one big topic, as the collection of "United States", "of", and "America", and also as "United", "States" "of", and "America" as seperate words. In other words, it must contain a model that can capture all three of the images below at once</p>
+<img src="assets/td2.png" width="30%"> </img> <br>
+<img src="assets/td3.png" width="30%"> </img> <br>
+<img src="assets/td1.png" width="30%"> </img> <br>
+<p> This is clearly a problem of abstraction: how detailed or ("literal") do you want the program to see topics? Humans can switch abstraction levels easily. It is as such seen that when given a third grade test with the question "what is yellow and gives us heat", most AI stumbles; there are so many things that are yellow and give off heat to a computer.</p>
+
+<p> In any case, here's a more accurate model in my view. I think this mirrors the mental understanding of humans a lot more accurately since it shows different levels of abstraction, from elementary words to larger aggregations. In the future, a seperate graph that shows how topics are constructed can be made, enhancing the accuracy of the overall project. However, since I can't think of a current use, aggregating pairs into the most general possible topic will do. </p>
+<img src="assets/td1.png" width="30%"> </img> <br>
+
 
                           </div>
                       </div>
