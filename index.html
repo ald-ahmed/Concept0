@@ -1,6 +1,6 @@
-
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,259 +10,296 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Lato" rel="stylesheet">
 
-<link href="assets/video-js.css" rel="stylesheet">
-<script src="assets/videojs-ie8.min.js"></script>
+    <link href="assets/video-js.css" rel="stylesheet">
+    <script src="assets/videojs-ie8.min.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<style>
+    <style>
+        body {
+            font-family: 'Open Sans';
+            overflow-x: hidden;
+        }
 
-body {
-  font-family: 'Open Sans';
-  overflow-x: hidden;
-}
-.main {
-  font-weight: 400;
-}
+        .main {
+            font-weight: 400;
+        }
 
-.intro  {
-  font-family: 'Lato';
-  font-weight: 300;
-  font-size: 32px;
-  display:block;
-}
+        .intro {
+            font-family: 'Lato';
+            font-weight: 300;
+            font-size: 32px;
+            display: block;
+        }
 
+        nav[data-toggle='toc'] {
+            margin-top: 30px;
+        }
+        /* small screens */
 
-body {
-  opacity: 1;
-  transition-delay: 0s;
-  transition-property:  opacity;
-  transform-style: ease;
-animation-name:loaded;
-animation-duration: 1s;
-}
+        @media (max-width: 768px) {
+            /* override the Affix plugin so that the navigation isn't sticky */
+            div.affix {
+                position: static;
+            }
+        }
 
-@keyframes line-opening {
-  from {width: 0%; opacity:0;}
-  to {width: 50%;}
-}
+        body {
+            opacity: 1;
+            transition-delay: 0s;
+            transition-property: opacity;
+            transform-style: ease;
+            animation-name: loaded;
+            animation-duration: 1s;
+        }
 
-@keyframes loaded  {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-.centered{
-    float: none;
-    margin: 0 auto;
-}
- .border{
-   background: #ffffff none repeat scroll 0 0;
-   content: "";
-   height: 2px;
-   transition-delay: 1s;
-   transition-property: width, opacity;
-   transform-style: ease;
-   animation-name: line-opening;
-   animation-duration: 2s;
-   animation-delay: 0s;
-   display:block;
-   position: relative;
-   width:50%;
-   left:25%;
-   opacity:1;
- }
+        @keyframes line-opening {
+            from {
+                width: 0%;
+                opacity: 0;
+            }
+            to {
+                width: 50%;
+            }
+        }
 
-a, a:hover{
-    color: #FF5F6D;
-}
+        @keyframes loaded {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-blockquote {
-    border-left: 5px solid #FF5F6D;
-    font-family: "Lato";
-}
+        .centered {
+            float: none;
+            margin: 0 auto;
+        }
 
-.bold {
-  font-weight:700;
-}
+        .border {
+            background: #ffffff none repeat scroll 0 0;
+            content: "";
+            height: 2px;
+            transition-delay: 1s;
+            transition-property: width, opacity;
+            transform-style: ease;
+            animation-name: line-opening;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            display: block;
+            position: relative;
+            width: 50%;
+            left: 25%;
+            opacity: 1;
+        }
 
-h2 {
-    font-family: lato;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-      -moz-user-select: none;     /* Firefox all */
-      -ms-user-select: none;      /* IE 10+ */
-      user-select: none;          /* Likely future */
-cursor: default;
-}
-.intro-header {
-    text-align:center;
-    background-size: cover;
-    background: rgba(0, 0, 0, 0) linear-gradient(to left, #e96443, #904e95) repeat scroll 0 0;
-    color: #ffffff;
-    margin-bottom: 10%;
-    padding:5%;
-}
-.transparent.navbar-inverse .navbar-inner {
-   background: rgba(0,0,0,0.4);
-}
-p {
-margin:  0 0 25px;
-}
+        a,
+        a:hover {
+            color: #FF5F6D;
+        }
 
-.toc-container{
-  float:none;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  position: sticky;
+        blockquote {
+            border-left: 5px solid #FF5F6D;
+            font-family: "Lato";
+        }
 
-}
-#toc {
-  left: 10px;
-  top: 30px;
-}
+        .bold {
+            font-weight: 700;
+        }
 
-h2{
-  background: linear-gradient(to left, #f45462 , #ff5f6d);
-  color: #ffffff;
-  padding: 2%;
-}
+        h2 {
+            font-family: lato;
+            margin-bottom: 5%;
+            margin-top: 5%;
+            -webkit-user-select: none;
+            /* Chrome all / Safari all */
+            -moz-user-select: none;
+            /* Firefox all */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+            /* Likely future */
+            cursor: default;
+        }
 
-a > img {
-  cursor: zoom-in;
-}
-img {
-  left:0;margin: 0 auto; position:relative ;display:block;
-}
-.video-js {
-    position: relative !important;
-    width: 100% !important;
-    height: 80% !important;
-}
+        .intro-header {
+            text-align: center;
+            background-size: cover;
+            background: rgba(0, 0, 0, 0) linear-gradient(to left, #e96443, #904e95) repeat scroll 0 0;
+            color: #ffffff;
+            padding: 5%;
+        }
 
-video {
-  position: relative!important;
-  margin: 0 auto;
-  background-color:white;
-}
-footer {
-  background: linear-gradient(to left, #f45462 , #ff5f6d);
- margin-top:2%;
- padding-top:3%;
-color:white;
-text-align: center;
-}
+        .transparent.navbar-inverse .navbar-inner {
+            background: rgba(0, 0, 0, 0.4);
+        }
 
+        p {
+            margin: 0 0 25px;
+        }
 
-</style>
+        .toc-container {
+            float: none;
+        }
 
-  </head>
-  <body data-spy="scroll" data-target="#toc">
+        #toc {
+            left: 10px;
+        }
+
+        .affix {
+            top: 0px!important;
+        }
+
+        h2 {
+            background: linear-gradient(to left, #f45462, #ff5f6d);
+            color: #ffffff;
+            padding: 2%;
+        }
+
+        a>img {
+            cursor: zoom-in;
+        }
+
+        img {
+            left: 0;
+            margin: 0 auto;
+            position: relative;
+            display: block;
+        }
+
+        .video-js {
+            position: relative !important;
+            width: 100% !important;
+            height: 80% !important;
+        }
+
+        video {
+            position: relative!important;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        footer {
+            background: linear-gradient(to left, #f45462, #ff5f6d);
+            margin-top: 2%;
+            padding-top: 3%;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#toc">
 
     <!-- Navigation -->
-       <nav class=" transparent">
-           <div class="container-fluid">
-               <!-- Brand and toggle get grouped for better mobile display -->
-               <div class="navbar-header page-scroll">
-                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    <nav class=" transparent">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                        <span class="sr-only">Toggle navigation</span>
                        Menu <i class="fa fa-bars"></i>
                    </button>
-               </div>
+            </div>
 
-               <!-- Collect the nav links, forms, and other content for toggling -->
-               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav navbar-right">
-                       <li>
-                           <a href="index.html">Home</a>
-                       </li>
-                       <li>
-                         <a href="https://github.com/ald-ahmed/Concept0">Source Files</a>
-                       </li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ald-ahmed/Concept0">Source Files</a>
+                    </li>
 
-                   </ul>
-               </div>
-               <!-- /.navbar-collapse -->
-           </div>
-           <!-- /.container -->
-       </nav>
-
-
-       <header class="intro-header">
-
-         <img class='intro' src="assets/logo.png" width="220px">  </img>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
 
-          </header>
+    <header class="intro-header">
+
+        <img class='intro' src="assets/logo.png" width="220px"> </img>
 
 
-
-
-              <!--  Content -->
-              <div class="main">
-
-                <div class="toc-container col-xs-12 col-lg-3" >
-                  <nav id="toc" data-toggle="toc"></nav>
-                  </div>
-
-                  <div class="container">
-
-                          <div class="col-lg-8 col-md-10 centered">
-
-                            <h2 class="section-heading">Preface</h2>
-
-
-                            <p>There exists a problem with the way science functions today. Machine learning literature is often so focused on it&rsquo;s inner-circle audience (researchers and other scientists), that it neglects the task of sharing and explaining the results to the more general population. This crucial task of communication is often left up to the media, which in attempting to gain the reader&rsquo;s attention will either sensationalize findings or risk not being read at all.</p>
-                            <p>This hints at broader issue at hand, which is effective communication. How do we begin to make ML more understandable? Or for that matter, any other highly-specialized sector of technology?</p>
-
-                            <p>With the aim to provide some insight into this issue, and through the spirit of scientific research and open source work, I present a special natural language processing project.</p>
-                              <blockquote>The mission is simple: attempt to create a natural language processing AI, and in doing so, outline, explore, and present the results from the perspective of a student.</blockquote>
-                            <p>This means less usage of highly scientific&nbsp;terminology and more of simple, easy to understand research results for anyone to examine and learn from. More specifically, this is a project that aims to explore what occurs when we attempt to model computer algorithms using what we know about psychology and neuroscience.</p>
+    </header>
 
 
 
 
-                            <h2 class="section-heading">"What does ___ mean?"</h2>
+    <!--  Content -->
+    <div class="main">
 
-<p> Examine the following scenario: </p>
-
-<p>Rewind to the first grade. You and your best friend are talking about the homework during class. Your friend mentions an unfamiliar word, lets say, “complex.” You ask what “complex” means and your friend replies “its like complicated.” You nod or perhaps smile.
-</p>
-<p>
-In this scenario, you didn’t learn anything more about the word “complex” other than the fact that it’s close to “complicated” in terms of what it signifies.
-</p>
-<p>
-So, if we imagine that each word in your vocabulary is a small node or sphere, you simply grouped up the nodes “complicated” and “complex” together, and said to yourself that the two are used to mean approximately the same thing.
-</p>
-<p>
-The question is, can we replicate this natural clustering that humans do in terms of a program that can group up words that mean the same thing? It’s important to note that we can’t simple pull up a ready list of synonyms for each word we are interested in. We want a program to understand the connections between words without having to rely on a human-categorized set of connections.
-</p>
-<p>
-We want to make a program to “understand” the meaning of words in terms of other words, and do so unsupervised. Such program can then be applied to many uses, such as summerizing text (more on that later).
-</p>
-
-<h2 class="section-heading">Concept Map: Construction</h2>
-
-<p>Besides learning from friends or people around me, as a second English language learner, I often found myself using the dictionary to understand the meaning of words.</p>
-<p>Similarly, I propose the usage of a dictionary to allow the program to form connections. From intuition, any dictionary definition will either define words by using synonyms or by mentioning the components that make up the concept the word refers to.</p>
-<p>Here&rsquo;s an example: For a word like &ldquo;angry,&rdquo; a definition will probably say &ldquo;the feeling of being upset, frustrated, or infuriated.&rdquo; &ldquo;Upset&rdquo;, &ldquo;frustrated&rdquo;, and &ldquo;infuriated&rdquo; are all semantically close to angry and &ldquo;feeling&rdquo; is a component of being angry.</p>
-<p>Here&rsquo;s a proposition on how a program can use this to build a concept map:</p>
-<blockquote class="blockquote">
-<p>1. Look up a word in the dictionary, call this word the <b>origin</b>.</p>
-<p>2. Connect each word in the returned definition to the <b>origin</b> word.</p>
-<p>3. For each word in the returned definition, repeat step 1.</p>
-</blockquote>
-<p>For the dictionary, a free API provided by Pearson is used. The method is simply a recursive function that outputs to console. The output is then copied, refined, and graphed on Gephi.</p>
-<p>The result of this simple hypothesis was astounding. As seen, the program clustered things like days of the week around &ldquo;week,&rdquo; even though &ldquo;Monday&rdquo; is not a synonym of &ldquo;week.&rdquo;</p>
+        <div class="toc-container col-xs-3" data-spy="affix" data-offset-top="275" data-offset-top>
+            <nav id="toc" data-toggle="toc"></nav>
+        </div>
 
 
-<video id="dicvideo" class="video-js vjs-big-play-centered"  muted controls preload="auto" data-setup='{ "controls": false, "autoplay": true, "preload": "auto", "loop": true, "muteToggle": true }'>
+        <div class="col-xs-6 centered">
+
+            <h2 class="section-heading">Preface</h2>
+
+
+            <p>There exists a problem with the way science functions today. Machine learning literature is often so focused on it&rsquo;s inner-circle audience (researchers and other scientists), that it neglects the task of sharing and explaining the results
+                to the more general population. This crucial task of communication is often left up to the media, which in attempting to gain the reader&rsquo;s attention will either sensationalize findings or risk not being read at all.</p>
+            <p>This hints at broader issue at hand, which is effective communication. How do we begin to make ML more understandable? Or for that matter, any other highly-specialized sector of technology?</p>
+
+            <p>With the aim to provide some insight into this issue, and through the spirit of scientific research and open source work, I present a special natural language processing project.</p>
+            <blockquote>The mission is simple: attempt to create a natural language processing AI, and in doing so, outline, explore, and present the results from the perspective of a student.</blockquote>
+            <p>This means less usage of highly scientific&nbsp;terminology and more of simple, easy to understand research results for anyone to examine and learn from. More specifically, this is a project that aims to explore what occurs when we attempt
+                to model computer algorithms using what we know about psychology and neuroscience.</p>
+
+
+
+
+            <h2 class="section-heading">"What does ___ mean?"</h2>
+
+            <p> Examine the following scenario: </p>
+
+            <p>Rewind to the first grade. You and your best friend are talking about the homework during class. Your friend mentions an unfamiliar word, lets say, “complex.” You ask what “complex” means and your friend replies “its like complicated.” You
+                nod or perhaps smile.
+            </p>
+            <p>
+                In this scenario, you didn’t learn anything more about the word “complex” other than the fact that it’s close to “complicated” in terms of what it signifies.
+            </p>
+            <p>
+                So, if we imagine that each word in your vocabulary is a small node or sphere, you simply grouped up the nodes “complicated” and “complex” together, and said to yourself that the two are used to mean approximately the same thing.
+            </p>
+            <p>
+                The question is, can we replicate this natural clustering that humans do in terms of a program that can group up words that mean the same thing? It’s important to note that we can’t simple pull up a ready list of synonyms for each word we are interested
+                in. We want a program to understand the connections between words without having to rely on a human-categorized set of connections.
+            </p>
+            <p>
+                We want to make a program to “understand” the meaning of words in terms of other words, and do so unsupervised. Such program can then be applied to many uses, such as summerizing text (more on that later).
+            </p>
+
+            <h2 class="section-heading">Concept Map: Construction</h2>
+
+            <p>Besides learning from friends or people around me, as a second English language learner, I often found myself using the dictionary to understand the meaning of words.</p>
+            <p>Similarly, I propose the usage of a dictionary to allow the program to form connections. From intuition, any dictionary definition will either define words by using synonyms or by mentioning the components that make up the concept the word
+                refers to.</p>
+            <p>Here&rsquo;s an example: For a word like &ldquo;angry,&rdquo; a definition will probably say &ldquo;the feeling of being upset, frustrated, or infuriated.&rdquo; &ldquo;Upset&rdquo;, &ldquo;frustrated&rdquo;, and &ldquo;infuriated&rdquo; are
+                all semantically close to angry and &ldquo;feeling&rdquo; is a component of being angry.</p>
+            <p>Here&rsquo;s a proposition on how a program can use this to build a concept map:</p>
+            <blockquote class="blockquote">
+                <p>1. Look up a word in the dictionary, call this word the <b>origin</b>.</p>
+                <p>2. Connect each word in the returned definition to the <b>origin</b> word.</p>
+                <p>3. For each word in the returned definition, repeat step 1.</p>
+            </blockquote>
+            <p>For the dictionary, a free API provided by Pearson is used. The method is simply a recursive function that outputs to console. The output is then copied, refined, and graphed on Gephi.</p>
+            <p>The result of this simple hypothesis was astounding. As seen, the program clustered things like days of the week around &ldquo;week,&rdquo; even though &ldquo;Monday&rdquo; is not a synonym of &ldquo;week.&rdquo;</p>
+
+
+            <video id="dicvideo" class="video-js vjs-big-play-centered" muted controls preload="auto" data-setup='{ "controls": false, "autoplay": true, "preload": "auto", "loop": true, "muteToggle": true }'>
     <source src="assets/1.mp4" type='video/mp4'>
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -270,159 +307,188 @@ We want to make a program to “understand” the meaning of words in terms of o
     </p>
   </video>
 
-<h2 class="section-heading">Concept Map: Potential and Limitation</h2>
-<p>What happened in the experiment above is that we replicated a very minor apparent mental process that people do when they seek to understand words. Of course, we are capable of much higher cognitive functions, so this program won&rsquo;t be able to understand the hierarchy of how words are structured just yet (&ldquo;water is a liquid and a liquid is a substance&rdquo;).</p>
-<p>What it can do, however, is read a dictionary and make semantic connections related to broad meaning and not just immediate synonyms.</p>
-<p>If refined and expanded, I think it can become an example of a reverse engineered dictionary: you ask it what a word means, and it will try to gather what type of connections is has and come up with a definition.</p>
-<p>Of course, such auto definer is not very useful, and I will not attempt to make it, but I mention it because I believe it entails is a step in the right direction.</p>
-<p>In order to build more useful applications, this map must be refined and expanded. The first step in this is using a different type of knowledge source in order to access more words and terms.</p>
+            <h2 class="section-heading">Concept Map: Potential and Limitation</h2>
+            <p>What happened in the experiment above is that we replicated a very minor apparent mental process that people do when they seek to understand words. Of course, we are capable of much higher cognitive functions, so this program won&rsquo;t be
+                able to understand the hierarchy of how words are structured just yet (&ldquo;water is a liquid and a liquid is a substance&rdquo;).</p>
+            <p>What it can do, however, is read a dictionary and make semantic connections related to broad meaning and not just immediate synonyms.</p>
+            <p>If refined and expanded, I think it can become an example of a reverse engineered dictionary: you ask it what a word means, and it will try to gather what type of connections is has and come up with a definition.</p>
+            <p>Of course, such auto definer is not very useful, and I will not attempt to make it, but I mention it because I believe it entails is a step in the right direction.</p>
+            <p>In order to build more useful applications, this map must be refined and expanded. The first step in this is using a different type of knowledge source in order to access more words and terms.</p>
 
-<h2 class="section-heading">Concept Map: Expanding and Refining</h2>
-<p>A dictionary is nice, but I don't use it often. If I want to learn about something, I usually click the first Wikipedia link after searching for a topic on Google.</p>
-<p>Here's a replicated version of the dictionary experiment using Wikipedia. Tip: click the image and zoom to the branches.</p>
-<a href="assets/lt.pdf" alt="click to view"><img src="assets/2.png" width="80%"> </img></a>
+            <h2 class="section-heading">Concept Map: Expanding and Refining</h2>
+            <p>A dictionary is nice, but I don't use it often. If I want to learn about something, I usually click the first Wikipedia link after searching for a topic on Google.</p>
+            <p>Here's a replicated version of the dictionary experiment using Wikipedia. Tip: click the image and zoom to the branches.</p>
+            <a href="assets/lt.pdf" alt="click to view"><img src="assets/2.png" width="80%"> </img>
+            </a>
 
-<p>Here&#39;s an example run through of the algorithim used to generate this:</p>
+            <p>Here&#39;s an example run through of the algorithim used to generate this:</p>
 
-<blockquote>
-<p>Assuming you have a list of hashtables called links with the following structure:&nbsp;<strong>source</strong>,&nbsp;<strong>target</strong>,&nbsp;<strong>weight</strong>
-</p>
-  <ol>
-    <li>
-      &nbsp; Look up the word &quot;Los Angeles&quot; (origin or source word)</li>
-    <li>
-      &nbsp; Split each word of the article by whitespace</li>
-    <li>
-      &nbsp; Set &quot;Los Angeles&quot; as source and connect it to each word</li>
-    <li>
-      &nbsp; If this link alreaedy exists, increment the weight entry.</li>
-    <li>
-      &nbsp; Repeat step 1 on every word in the article</li>
-  </ol>
+            <blockquote>
+                <p>Assuming you have a list of hashtables called links with the following structure:&nbsp;<strong>source</strong>,&nbsp;<strong>target</strong>,&nbsp;<strong>weight</strong>
+                </p>
+                <ol>
+                    <li>
+                        &nbsp; Look up the word &quot;Los Angeles&quot; (origin or source word)</li>
+                    <li>
+                        &nbsp; Split each word of the article by whitespace</li>
+                    <li>
+                        &nbsp; Set &quot;Los Angeles&quot; as source and connect it to each word</li>
+                    <li>
+                        &nbsp; If this link alreaedy exists, increment the weight entry.</li>
+                    <li>
+                        &nbsp; Repeat step 1 on every word in the article</li>
+                </ol>
 
-</blockquote>
+            </blockquote>
 
-<h2 class="section-heading">Topic Detection: Word Pairs</h2>
-<p>The results with Wikipedia are impressive as they show two improvements: one, increased breadth (size of wiki vs. size of dictionary api) and two, the increased complexity of each result. </p>
-<p>In order to make use of these two additions, one must be able to "digest" each result in greater detail. Here, I will explore how to one might go about creating topic detection. This will allow the program to recognize "United States of America" instead of just "United", "States" "of", and "America" seperately. </p>
+            <h2 class="section-heading">Topic Detection: Word Pairs</h2>
+            <p>The results with Wikipedia are impressive as they show two improvements: one, increased breadth (size of wiki vs. size of dictionary api) and two, the increased complexity of each result. </p>
+            <p>In order to make use of these two additions, one must be able to "digest" each result in greater detail. Here, I will explore how to one might go about creating topic detection. This will allow the program to recognize "United States of America"
+                instead of just "United", "States" "of", and "America" seperately. </p>
 
-<p>
-  In terms of code, each node and edge are represented by a hashtable of links. These links include the source or origin node, the target node, and the weight of the edge connecting them. The weight is simply the frequency of the target node appearing in the article.
-<p>
-The starting hypothesis behind this project assumed that each word can be viewed as a node connected by an edge, modeled after neurons that are connected by synapses. In neuroscience, Hebbian theory explains that neurons that fire toghether, wire toghether. </p>
-
-
-<p>As such, one can create a list of word pairs appearing in the article, and then increase the weights everytime they're encountered. In the end, and after many articles have been examined, one can sort this list of pairs by weight and see which pairs are likely to appear toghether. Allow me to illustrate:
-</p>
-
-  <a href="assets/pairs.png" alt="click to view"><img src="assets/pairs.png" width="80%"> </img></a>
-<br>
-<p>
-Here, the two sentences of "Los Angeles is a city in California" and "Los Angeles is large" are broken down to two word pairs. If the program picks the highest weighted pairs, then "Los Angeles" would be a topic and "Angeles is" would be another topic. Over many sentences, the connection between "Los" and "Angeles" would be very large compared to "Angeles" and "is".
-</p>
-
-<h2 class="section-heading">Topic Detection: Aggregation</h2>
-
-<p> Assume, following the above method, the sentences "United States of America" and "Democratic Republic of Congo" appear exactly the same number of times (equal weights all throughout). Modeled using nodes and edges, here is how it would appear: </p>
-
-  <a href="assets/pairsflaw.png" alt="click to view"><img src="assets/pairsflaw.png" width="80%"> </img></a>
-<br>
-<p> Now since this is an AI project, assume the program is asked to complete this phrase: "United States of [...]" <br> Any human can obviously complete it with "America". However, looking at the model, it is unclear weather its "United States of Congo" or "United States of America" since both edges leading to "America" and "Congo" have the same weight. </p>
-
-<p>In current implementation, this issue is solved by aggregating pairs that have strong connections. This means that one must begin with a list of pairs alike the one above. Here's the puedocode:
-
-</p>
-
-<blockquote>
-<p>Assuming you have a word pair list (the one above), an empty list called buffer, and given
-  "United States of America is":
-</p>
-  <ol>
-  			<li>
-  				&nbsp;Examine &quot;United&quot; and &quot;States&quot;, if there&#39;s a strong connection, add them to buffer</li>
-  			<li>
-  				&nbsp;Now examine &quot;States&quot; and &quot;of&quot;, if there&#39;s a strong connection, add &quot;of&quot; to buffer</li>
-  			<li>
-  				&nbsp;Examine &quot;of&quot; and &quot;America&quot;,&nbsp;if there&#39;s a strong connection, add &quot;America&quot; to buffer</li>
-  			<li>
-  				&nbsp;Examine&nbsp;&quot;America&quot; and &quot;is&quot;, if there&#39;s a strong connection, add &quot;is&quot; to buffer</li>
-  			<li>
-  				&nbsp;&quot;America&quot; and &quot;is&quot; don&#39;t have a strong connection, therefore, stop and establish the contents of buffer as a topic (&quot;United States of America&quot;)</li>
-  		</ol>
-
-</blockquote>
-
-<p>  Notice the keyword strong connection. In the code, this is set to an edge weight higher than 1 (in other words, we have seen that word X come before Y more than once).  </p>
+            <p>
+                In terms of code, each node and edge are represented by a hashtable of links. These links include the source or origin node, the target node, and the weight of the edge connecting them. The weight is simply the frequency of the target node appearing in
+                the article.
+                <p>
+                    The starting hypothesis behind this project assumed that each word can be viewed as a node connected by an edge, modeled after neurons that are connected by synapses. In neuroscience, Hebbian theory explains that neurons that fire toghether, wire toghether.
+                    </p>
 
 
-<h2 class="section-heading">Topic Detection: Dealing with Non-Functional Words</h2>
+                <p>As such, one can create a list of word pairs appearing in the article, and then increase the weights everytime they're encountered. In the end, and after many articles have been examined, one can sort this list of pairs by weight and see
+                    which pairs are likely to appear toghether. Allow me to illustrate:
+                </p>
+
+                <a href="assets/pairs.png" alt="click to view"><img src="assets/pairs.png" width="80%"> </img>
+                </a>
+                <br>
+                <p>
+                    Here, the two sentences of "Los Angeles is a city in California" and "Los Angeles is large" are broken down to two word pairs. If the program picks the highest weighted pairs, then "Los Angeles" would be a topic and "Angeles is" would be another topic.
+                    Over many sentences, the connection between "Los" and "Angeles" would be very large compared to "Angeles" and "is".
+                </p>
+
+                <h2 class="section-heading">Topic Detection: Aggregation</h2>
+
+                <p> Assume, following the above method, the sentences "United States of America" and "Democratic Republic of Congo" appear exactly the same number of times (equal weights all throughout). Modeled using nodes and edges, here is how it would
+                    appear: </p>
+
+                <a href="assets/pairsflaw.png" alt="click to view"><img src="assets/pairsflaw.png" width="80%"> </img>
+                </a>
+                <br>
+                <p> Now since this is an AI project, assume the program is asked to complete this phrase: "United States of [...]" <br> Any human can obviously complete it with "America". However, looking at the model, it is unclear weather its "United States
+                    of Congo" or "United States of America" since both edges leading to "America" and "Congo" have the same weight. </p>
+
+                <p>In current implementation, this issue is solved by aggregating pairs that have strong connections. This means that one must begin with a list of pairs alike the one above. Here's the puedocode:
+
+                </p>
+
+                <blockquote>
+                    <p>Assuming you have a word pair list (the one above), an empty list called buffer, and given "United States of America is":
+                    </p>
+                    <ol>
+                        <li>
+                            &nbsp;Examine &quot;United&quot; and &quot;States&quot;, if there&#39;s a strong connection, add them to buffer</li>
+                        <li>
+                            &nbsp;Now examine &quot;States&quot; and &quot;of&quot;, if there&#39;s a strong connection, add &quot;of&quot; to buffer</li>
+                        <li>
+                            &nbsp;Examine &quot;of&quot; and &quot;America&quot;,&nbsp;if there&#39;s a strong connection, add &quot;America&quot; to buffer</li>
+                        <li>
+                            &nbsp;Examine&nbsp;&quot;America&quot; and &quot;is&quot;, if there&#39;s a strong connection, add &quot;is&quot; to buffer</li>
+                        <li>
+                            &nbsp;&quot;America&quot; and &quot;is&quot; don&#39;t have a strong connection, therefore, stop and establish the contents of buffer as a topic (&quot;United States of America&quot;)</li>
+                    </ol>
+
+                </blockquote>
+
+                <p> Notice the keyword strong connection. In the code, this is set to an edge weight higher than 1 (in other words, we have seen that word X come before Y more than once). </p>
 
 
-<p>The above algorithim will generate large numbers of topics such as "city of" and "as in" given that words like "of", "as", "in", "the", etc., pair up with almost everything. In order to generate better topics, one must handle those non-functional words. Quick note: the specifics on what to keep and what not to keep in refining topic detection is a matter of choice at this point and will be used to illustrate unsupervised learning. The rule I will implement is as follows: </p>
-<blockquote>
-Topics must not have trailing non-functional words.
-</blockquote>
-
-<p> I chose this given rule just following some examples: from "city of" I just need "city", from "the united states" I just need "united states", and for "city of los angeles" I would want the entire thing. In order to implement this rule, one must be able to distinguish between a non-functional word and a functional word.</p>
-
-<h2 class="section-heading">Topic Detection: Refining Using DBSCAN</h2>
-
-<p> In machine learning, supervised learning means you let the machine run many trial and error gueses and "tip" it in the right direction, until it gets it right. For instance, a machine learning code trying to distinguish between a picture of a dog versus a picture of a cat will need a human to "train" it, or tell it which is which for X number of pictures until it can begin forming patterns that allow it to distinguish what makes a dog picture versus what makes a cat picture.</p>
-
-<p>
-Unsupervised learning throws the training aspect out of the window. In other words, you don't tell it whats a dog picture and whats a cat picture, you just ask it to come up with 2 catagories of pictures. The machine will then attempt to stastically seperate out the catagories. In the end, you give it a picture of a dog, and it tells you thats a picture of catagory 1, for instance.
-</p>
-
-<p> Unsupervised learning is hard to get right, and I doubt anyone uses it to catagorize animal pictures. However, how can one go about detecting non-functional word without supervision? I will begin by outlining some of the patterns I noticed regarding non-functional words.</p>
-
-<p> Recall the first dictionary example run. In it, most non-functional words were in the center becasue they were connected to almost every node. This hints that in any given article, the frequency of non-functional words will be high. </p>
-
- <p> In terms of code however, even if one is to keep track of a word's frequency, how can it be used to distinguish between two catagories. Moreover, even relative frequency (frequency of a word divided by the total number of words seen), changes as you explore the articles. There's a shifting scale problem but frequency is certainly a good start. I graphed the frequencies of the words after examining a couple of articles: </p>
-   <br>
-   <a href="assets/freqgraph.png" alt="click to view"><img src="assets/freqgraph.png" width="80%"> </img></a>
-   <br>
-<p> As seen in the picture, the frequency of non-functional words is greatly larger than the other words. I will use this fact to build a unsupervised classifier.<p>
-
-<p>DBSCAN, or Density-based spatial clustering of applications with noise, is an unsupervised learning algorithim that divides data into catagories based on density. K-means is another unsupervised algorithim, but it requires clusters to be of equal size to work well. As seen in the graph, K-means is certainly not going to work given that the non-functional words are more of outliers than they are a cluster. </p>
-
-<p> <b>Quick note: I tried K-means, and it worked fine. However, DBSCAN had an unbelievable accuracy and I decided to go with that instead. </b></p>
-
-<p>Feeding the data into DBSCAN showed amazing accuracy, but it required a huge number of articles to detect "was" as a non-functional word (45 thousand articles). When I attempted to save the article data and run DBSCAN on it afterwards, my computer kept sending a kill signal to the code since it was using too much memory. </p>
-
-<p>I, as a human, didn't think I needed 45 thousand articles to see that "was" is a non-fucntional word, so why was the program struggling? After days of thinking, I found the solution when I realized that I had to introduce another feature to make the process more effiecent. This feauture was the "spread" or prevalency of the word. In other words, keep track of a number that answers the question "In how many diffrent articles did you see word X?". This was key, and after implementing this counter, I was able to detect more non-funtional words than I ever thought existed with just 800 articles. Now, I keep track of how frequency <b> and </b> how prevalent each word is. </p>
-
-<p> After implementing DBSCAN effectively, I implemented the rule of no trailing non-funtional words within topics. So far, I'm impressed with the results and would like to reflect on the process. <p>
-
-<h2 class="section-heading">Topic Detection: Reflection</h2>
-
-<p>While the solution offered above works, it seems a far shot away from the complex analysis the brain must be doing in understanding topics and the components of those topics. Yes, neurons that fire toghether wire toghether, and one can replicate this idea in code to generate two word pairs. However, because humans can conceptualize and tokenize on a variety of abstraction levels, the brain must be able to somehow remember the specific route of neurons. </p>
-<p>This is absolutely essential, and it's a missing gap in the technique described above since the program is simple taking the longest plausable combination of words and establishing them as a topic. </p>
-<p>In order to truly conceptualize, the program must be able to identify "United States of America" both as one big topic, as the collection of "United States", "of", and "America", and also as "United", "States" "of", and "America" as seperate words. In other words, it must contain a model that can capture all three of the images below at once</p>
-<img src="assets/td2.png" width="30%"> </img> <br>
-<img src="assets/td3.png" width="30%"> </img> <br>
-<img src="assets/td1.png" width="30%"> </img> <br>
-<p> This is clearly a problem of abstraction: how detailed or ("literal") do you want the program to see topics? Humans can switch abstraction levels easily. It is as such seen that when given a third grade test with the question "what is yellow and gives us heat", most AI stumbles; there are so many things that are yellow and give off heat to a computer.</p>
-
-<p> In any case, here's a more accurate model in my view. I think this mirrors the mental understanding of humans a lot more accurately since it shows different levels of abstraction, from elementary words to larger aggregations. In the future, a seperate graph that shows how topics are constructed can be made, enhancing the accuracy of the overall project. However, since I can't think of a current use, aggregating pairs into the most general possible topic will do. </p>
-<img src="assets/tdgraph.png" width="75%"> </img> <br>
+                <h2 class="section-heading">Topic Detection: Dealing with Non-Functional Words</h2>
 
 
-                          </div>
-                      </div>
-                  </div>
+                <p>The above algorithim will generate large numbers of topics such as "city of" and "as in" given that words like "of", "as", "in", "the", etc., pair up with almost everything. In order to generate better topics, one must handle those non-functional
+                    words. Quick note: the specifics on what to keep and what not to keep in refining topic detection is a matter of choice at this point and will be used to illustrate unsupervised learning. The rule I will implement is as follows: </p>
+                <blockquote>
+                    Topics must not have trailing non-functional words.
+                </blockquote>
+
+                <p> I chose this given rule just following some examples: from "city of" I just need "city", from "the united states" I just need "united states", and for "city of los angeles" I would want the entire thing. In order to implement this rule,
+                    one must be able to distinguish between a non-functional word and a functional word.</p>
+
+                <h2 class="section-heading">Topic Detection: Refining Using DBSCAN</h2>
+
+                <p> In machine learning, supervised learning means you let the machine run many trial and error gueses and "tip" it in the right direction, until it gets it right. For instance, a machine learning code trying to distinguish between a picture
+                    of a dog versus a picture of a cat will need a human to "train" it, or tell it which is which for X number of pictures until it can begin forming patterns that allow it to distinguish what makes a dog picture versus what makes a cat
+                    picture.</p>
+
+                <p>
+                    Unsupervised learning throws the training aspect out of the window. In other words, you don't tell it whats a dog picture and whats a cat picture, you just ask it to come up with 2 catagories of pictures. The machine will then attempt to stastically seperate
+                    out the catagories. In the end, you give it a picture of a dog, and it tells you thats a picture of catagory 1, for instance.
+                </p>
+
+                <p> Unsupervised learning is hard to get right, and I doubt anyone uses it to catagorize animal pictures. However, how can one go about detecting non-functional word without supervision? I will begin by outlining some of the patterns I noticed
+                    regarding non-functional words.</p>
+
+                <p> Recall the first dictionary example run. In it, most non-functional words were in the center becasue they were connected to almost every node. This hints that in any given article, the frequency of non-functional words will be high. </p>
+
+                <p> In terms of code however, even if one is to keep track of a word's frequency, how can it be used to distinguish between two catagories. Moreover, even relative frequency (frequency of a word divided by the total number of words seen),
+                    changes as you explore the articles. There's a shifting scale problem but frequency is certainly a good start. I graphed the frequencies of the words after examining a couple of articles: </p>
+                <br>
+                <a href="assets/freqgraph.png" alt="click to view"><img src="assets/freqgraph.png" width="80%"> </img>
+                </a>
+                <br>
+                <p> As seen in the picture, the frequency of non-functional words is greatly larger than the other words. I will use this fact to build a unsupervised classifier.
+                    <p>
+
+                        <p>DBSCAN, or Density-based spatial clustering of applications with noise, is an unsupervised learning algorithim that divides data into catagories based on density. K-means is another unsupervised algorithim, but it requires clusters
+                            to be of equal size to work well. As seen in the graph, K-means is certainly not going to work given that the non-functional words are more of outliers than they are a cluster. </p>
+
+                        <p> <b>Quick note: I tried K-means, and it worked fine. However, DBSCAN had an unbelievable accuracy and I decided to go with that instead. </b></p>
+
+                        <p>Feeding the data into DBSCAN showed amazing accuracy, but it required a huge number of articles to detect "was" as a non-functional word (45 thousand articles). When I attempted to save the article data and run DBSCAN on it afterwards,
+                            my computer kept sending a kill signal to the code since it was using too much memory. </p>
+
+                        <p>I, as a human, didn't think I needed 45 thousand articles to see that "was" is a non-fucntional word, so why was the program struggling? After days of thinking, I found the solution when I realized that I had to introduce another
+                            feature to make the process more effiecent. This feauture was the "spread" or prevalency of the word. In other words, keep track of a number that answers the question "In how many diffrent articles did you see word X?". This
+                            was key, and after implementing this counter, I was able to detect more non-funtional words than I ever thought existed with just 800 articles. Now, I keep track of how frequency <b> and </b> how prevalent each word is. </p>
+
+                        <p> After implementing DBSCAN effectively, I implemented the rule of no trailing non-funtional words within topics. So far, I'm impressed with the results and would like to reflect on the process.
+                            <p>
+
+                                <h2 class="section-heading">Topic Detection: Reflection</h2>
+
+                                <p>While the solution offered above works, it seems a far shot away from the complex analysis the brain must be doing in understanding topics and the components of those topics. Yes, neurons that fire toghether wire toghether,
+                                    and one can replicate this idea in code to generate two word pairs. However, because humans can conceptualize and tokenize on a variety of abstraction levels, the brain must be able to somehow remember the specific
+                                    route of neurons. </p>
+                                <p>This is absolutely essential, and it's a missing gap in the technique described above since the program is simple taking the longest plausable combination of words and establishing them as a topic. </p>
+                                <p>In order to truly conceptualize, the program must be able to identify "United States of America" both as one big topic, as the collection of "United States", "of", and "America", and also as "United", "States" "of", and
+                                    "America" as seperate words. In other words, it must contain a model that can capture all three of the images below at once</p>
+                                <img src="assets/td2.png" width="30%"> </img> <br>
+                                <img src="assets/td3.png" width="30%"> </img> <br>
+                                <img src="assets/td1.png" width="30%"> </img> <br>
+                                <p> This is clearly a problem of abstraction: how detailed or ("literal") do you want the program to see topics? Humans can switch abstraction levels easily. It is as such seen that when given a third grade test with the question
+                                    "what is yellow and gives us heat", most AI stumbles; there are so many things that are yellow and give off heat to a computer.</p>
+
+                                <p> In any case, here's a more accurate model in my view. I think this mirrors the mental understanding of humans a lot more accurately since it shows different levels of abstraction, from elementary words to larger aggregations.
+                                    In the future, a seperate graph that shows how topics are constructed can be made, enhancing the accuracy of the overall project. However, since I can't think of a current use, aggregating pairs into the most general
+                                    possible topic will do. </p>
+                                <img src="assets/tdgraph.png" width="75%"> </img> <br>
+
+
+        </div>
+    </div>
 
 
 
-<!-- Footer -->
-  <footer>
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" >
-                  <p>Ahmed Al Dulaimy, 2016</p>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p>Ahmed Al Dulaimy, 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -432,4 +498,5 @@ Unsupervised learning throws the training aspect out of the window. In other wor
     <script src="assets/video.js"></script>
 
 </body>
+
 </html>
