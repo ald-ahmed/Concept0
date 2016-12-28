@@ -28,7 +28,7 @@ class Refiner:
         self.createLinks()
 
     def __del__(self):
-        print self.query, ' ended'
+        print ''
 
 
     def recreateSpheres(self):
@@ -40,7 +40,7 @@ class Refiner:
         tempSubject = []
         replaceStarting = -1
         strongConnection = 1
-        strengthThreshold = 1
+        strengthThreshold = 2
         i = 0
         while strongConnection:
             if len(tempSubject) == 0:
@@ -122,6 +122,7 @@ class Refiner:
         for newSphere in list:
             all.nonuniquecount += 1
             if newSphere in all.Spheres:
+
                 all.Spheres[newSphere][0] += 1
                 if newSphere not in newSphereUpdateSpread:
                     all.Spheres[newSphere][2] += 1
@@ -147,6 +148,8 @@ class Refiner:
 
         return self.spheres
 
+
+
     def getContent(self, query):
 
         print "Requesting ", query
@@ -156,14 +159,36 @@ class Refiner:
                             '&redirects=1')
         jsonData = data.json()
 
+
+
+
+        try:
+            redirectTo= jsonData['query']['redirects'][0]['to']
+            redirectTo= redirectTo.lower().strip()
+            print "redirects to ", redirectTo
+            if redirectTo in all.Spheres:
+                if all.Spheres[redirectTo][1]==1:
+                    print 'Entry already linked'
+                    return -1
+            else:
+                all.Spheres[redirectTo] = [1,1,1]
+                entry = {
+                    'source': self.query,
+                    'target': redirectTo,
+                    'weight': 1
+                }
+                self.links.append(entry)
+
+        except:
+            pass
         try:
             pageNumber = jsonData['query']['pages'].keys()[0]
+            if pageNumber == '-1':
+                print 'Entry not found'
+                return -1
         except:
             return -1
 
-        if pageNumber == '-1':
-            print 'Entry not found'
-            return -1
 
         extract = jsonData['query']['pages'][pageNumber]['extract']
 
