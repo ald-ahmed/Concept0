@@ -8,7 +8,7 @@ from pprint import pprint
 from collections import Counter
 import globalVars as all
 from collections import defaultdict
-
+import copy
 
 class Refiner:
     query = ""
@@ -18,8 +18,11 @@ class Refiner:
     done = 0
 
     def __init__(self, word,td):
+
         self.query = word
         self.getContent(word)
+        if self.done is 0:
+            return
         self.createSpheresFromText()
         self.updatePairs()
         if td:
@@ -27,36 +30,32 @@ class Refiner:
         self.addToAllSpheres(self.spheres)
         self.createLinks()
 
-    def __del__(self):
-        print ''
-
-
     def recreateSpheres(self):
 
-        if self.done is 0:
-            return
         # print "spheres before: ", self.spheres
         newSubjects = {}
         tempSubject = []
         replaceStarting = -1
         strongConnection = 1
-        strengthThreshold = 2
+        strengthThreshold = 1
         i = 0
         while strongConnection:
             if len(tempSubject) == 0:
                 tempSubject.append(self.spheres[i])
                 # print "\n added ", self.spheres[i]
 
-            pairFrequency = all.pairs[tempSubject[len(tempSubject) - 1]][self.spheres[i + 1]]
-            strengthMetric = pairFrequency
 
-            # print "strengthMetric is ", strengthMetric , " inversefreq is ", inverseFrequency, "and freq of both is", pairFrequency
+            lastWordinBuffer = tempSubject[len(tempSubject) - 1]
+
+            if lastWordinBuffer not in all.pairs:
+                pairFrequency=0
+            else:
+                pairFrequency = all.pairs[lastWordinBuffer][self.spheres[i + 1]]
+
+            strengthMetric = pairFrequency
 
             functionalWord = 1
 
-            # if self.spheres[i] in all.functionalChart and self.spheres[i+1] in all.functionalChart:
-            #     if all.functionalChart[self.spheres[i]] == -1 or all.functionalChart[self.spheres[i+1]] == -1:
-            #         functionalWord = -1
 
             if self.spheres[i] in all.functionalChart:
                 functionalWord = all.functionalChart[self.spheres[i]]
@@ -91,15 +90,63 @@ class Refiner:
         #print "spheres after: ", self.spheres
         pprint(newSubjects)
 
+
+    def sentenceSplitter(self,text):
+        result = []
+        listOfWords = text.split()
+        #print listOfWords
+        # quit()
+        start = 0
+        for index, word in enumerate(listOfWords):
+            listOfWords[index] = word
+            if word.endswith('.'):
+                if word.count('.') > 1:
+                    listOfWords[index] = listOfWords[index].replace(".",'')
+                    continue
+
+                if word[0].isupper() and len(word.strip(".")) < 4:
+
+                    #print "join them" , word
+                    try:
+                        listOfWords[index] = listOfWords[index + 1]
+                        del listOfWords[index + 1]
+                    except:
+                        pass
+                else:
+                    #print "end of sentence" , word
+                    result.append(listOfWords[start:index + 1])
+                    start = index + 1
+        listOfWords[index] = word
+
+        return result
+
+    def sentenceCleaner(self,input):
+
+        text = copy.deepcopy(input)
+
+        for index1, sentence in enumerate(text):
+            for index, word in enumerate(sentence):
+                word = word.lower().strip(".").strip(string.punctuation).replace(',','')
+                sentence[index] = word
+            text[index1] = sentence
+        result = text
+
+        return result
+
+
     def updatePairs(self):
         if self.done is 0:
             return
-        for i in range(len(self.spheres) - 1):
-            if self.spheres[i] not in all.pairs:
-                all.pairs[self.spheres[i]] = defaultdict(int)
-                all.pairs[self.spheres[i]].update({self.spheres[i + 1]: 1})
-            else:
-                all.pairs[self.spheres[i]][self.spheres[i + 1]] += 1
+
+        splitSentences = self.sentenceCleaner(self.sentenceSplitter(self.extract))
+
+        for sentence in splitSentences:
+            for i in range(len(sentence)-1):
+                if sentence[i] not in all.pairs:
+                    all.pairs[sentence[i]] = defaultdict(int)
+                    all.pairs[sentence[i]].update({sentence[i + 1]: 1})
+                else:
+                    all.pairs[sentence[i]][sentence[i + 1]] += 1
 
     def createLinks(self):
 
@@ -139,7 +186,7 @@ class Refiner:
 
         extract = extract.split()
 
-        # count how many non standard characters there are in each word, if 2 or less, add it
+        # count how many non-standard characters there are in each word, if 2 or less, add it
         for x in extract:
             x = x.strip(string.punctuation)
             numberOfMatches = len(re.findall(pattern, x))
@@ -148,58 +195,71 @@ class Refiner:
 
         return self.spheres
 
-
-
     def getContent(self, query):
+        if query=='':
+            return
 
-        print "Requesting ", query
+        print "\nRequesting ", query
         data = requests.get('http://en.wikipedia.org/w/api.php?format=json'
                             '&action=query&prop=extracts&exintro=&explaintext=&titles='
                             + query +
                             '&redirects=1')
         jsonData = data.json()
 
+        self.caseHandler(jsonData, query)
+
+        return self.extract
+
+
+    def caseHandler(self,jsonData,query):
+
+
+        # ENTRY NOT FOUND
+        pageNumber = jsonData['query']['pages'].keys()[0]
+
+        if pageNumber == '-1':
+            print 'Entry not found'
+            all.Spheres[query][1] = 1
+            return
 
 
 
+        # ENTRY AMBIGUOUS
+        extract = jsonData['query']['pages'][pageNumber]['extract']
+        self.extract = extract.encode('utf-8', 'ignore')
+
+        if "may refer to" in extract or (len(extract) < len(query) + 10):
+            print 'Entry is ambiguous'
+            all.Spheres[query][1] = 1
+            return
+
+        # ENTRY REDIRECTS
         try:
-            redirectTo= jsonData['query']['redirects'][0]['to']
-            redirectTo= redirectTo.lower().strip()
-            print "redirects to ", redirectTo
-            if redirectTo in all.Spheres:
-                if all.Spheres[redirectTo][1]==1:
-                    print 'Entry already linked'
-                    return -1
-            else:
-                all.Spheres[redirectTo] = [1,1,1]
-                entry = {
-                    'source': self.query,
-                    'target': redirectTo,
-                    'weight': 1
-                }
-                self.links.append(entry)
+            redirectTo = jsonData['query']['redirects'][0]['to']
+            redirectTo = redirectTo.lower().strip().encode('utf-8', 'ignore')
 
+            if redirectTo!=query:
+                print "redirects to " + redirectTo
+
+                if redirectTo in all.Spheres:
+                    print 'Entry already/will be linked'
+                    all.Spheres[query][1] = 1
+                    return
+                else:
+                    all.Spheres[redirectTo] = [1, 0, 1]
+                    entry = {
+                        'source': query,
+                        'target': redirectTo,
+                        'weight': 1
+                    }
+                    all.Links.append(entry)
+                    all.Spheres[query][1] = 1
+                    print "linked", query, "and", redirectTo
+                    return
         except:
             pass
-        try:
-            pageNumber = jsonData['query']['pages'].keys()[0]
-            if pageNumber == '-1':
-                print 'Entry not found'
-                return -1
-        except:
-            return -1
 
-
-        extract = jsonData['query']['pages'][pageNumber]['extract']
-
-        if "may refer to" in extract or (len(extract) < len(query)+10):
-            print 'Entry redirects'
-            # print extract
-            return -1
-        else:
-            self.extract = extract.encode('utf-8', 'ignore')
-            self.done = 1
-            return self.extract
+        self.done = 1
 
     def deleteAll(self):
         del self.links[:]
